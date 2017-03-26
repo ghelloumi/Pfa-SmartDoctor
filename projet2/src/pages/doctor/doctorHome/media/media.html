@@ -1,0 +1,76 @@
+<ion-header style="background-color:#ffb7d9">
+
+  <ion-navbar  newcolor>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Rendez vous</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content  style="background-color:#0c0663" >
+
+
+  <ion-item>
+    <img src="assets/images/bb.jpg">
+    <caption>
+      <h2>Smart doctor </h2>
+      <p>share our application on social media </p>
+    </caption>
+  </ion-item>
+
+
+
+  <ion-list>
+    <ion-item-group class="group">
+
+
+
+      <ion-item>
+        <button
+                class="button"
+                ion-button
+                icon-right
+                block
+                padding-vertical
+                color="primary"
+                (click)="sharePicker()">
+          Share this via Share Sheet
+          <ion-icon ios="ios-share" md="md-share"></ion-icon>
+        </button>
+      </ion-item>
+    </ion-item-group>
+
+
+
+    <ion-item-group class="group">
+      <ion-item-divider color="light">Share via e-mail</ion-item-divider>
+      <ion-item>
+        <ion-label block>To: </ion-label>
+        <ion-input
+                block
+                type="text"
+                placeholder="E-mail address..."
+                [(ngModel)]="sendTo"></ion-input>
+      </ion-item>
+
+
+
+      <ion-item>
+        <button
+                class="button"
+                ion-button
+                icon-right
+                block
+                padding-vertical
+                color="primary"
+                (click)="shareViaEmail()">
+          Share this via Email
+          <ion-icon ios="ios-mail" md="md-mail"></ion-icon>
+        </button>
+      </ion-item>
+    </ion-item-group>
+
+  </ion-list>
+
+</ion-content>
