@@ -17,8 +17,3 @@ export class MyApp {
     });
   }
 }
-
-//lll
-
-
-
