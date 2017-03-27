@@ -1,7 +1,7 @@
 import {Component, ViewChild} from '@angular/core';
 import { Nav,Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
-import {LoginPage} from "../pages/login/login";
+import {WelcomePage} from "../pages/welcome/welcome";
 
 
 
@@ -11,7 +11,7 @@ import {LoginPage} from "../pages/login/login";
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage = LoginPage;
+  rootPage = WelcomePage;
 
 
   constructor(platform: Platform) {

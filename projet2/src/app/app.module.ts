@@ -15,53 +15,57 @@ import {SearchPage} from '../pages/doctor/doctorHome/search/search';
 import {ChatPage} from '../pages/doctor/doctorHome/chat/chat.ts';
 import {MediaPage} from "../pages/doctor/doctorHome/media/media";
 import {DoctorHomePage} from "../pages/doctor/doctorHome/doctorHome";
-import { ChatService } from "../providers/chat-service";
+import {ChatService} from "../providers/chat-service";
 import {PatientHomePage} from "../pages/doctor/doctorHome/patient-home/patient-home";
 import {PatientAddPage} from "../pages/doctor/doctorHome/patient-home/patient-add/patient-add";
 import {PatientService} from "../providers/patient-service";
 import {AboutPage} from "../pages/about/about";
+import {WelcomePage} from "../pages/welcome/welcome";
 
 
 @NgModule({
-  declarations: [
-    MyApp,
-    HomePage,
-    LoginPage,
-    PatientSignUpPage,
-    DoctorSignUpPage,
-    DoctorSignUp2Page,
-    PhotoTiltComponent,
-    SearchPage,
-    RendezVousPage,
-    ChatPage,
-    DoctorHomePage,
-    MediaPage,
-    PatientHomePage,
-    PatientAddPage,
-    AboutPage
-  ],
-  imports: [
-    IonicModule.forRoot(MyApp)
-  ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    HomePage,
-    LoginPage,
-    PatientSignUpPage,
-    DoctorSignUpPage,
-    DoctorSignUp2Page,
-    SearchPage,
-    RendezVousPage,
-    ChatPage,
-    DoctorHomePage,
-    MediaPage,
-    PatientHomePage,
-    PatientAddPage,
-    AboutPage
+    declarations: [
+        MyApp,
+        HomePage,
+        LoginPage,
+        PatientSignUpPage,
+        DoctorSignUpPage,
+        DoctorSignUp2Page,
+        PhotoTiltComponent,
+        SearchPage,
+        RendezVousPage,
+        ChatPage,
+        DoctorHomePage,
+        MediaPage,
+        PatientHomePage,
+        PatientAddPage,
+        AboutPage
+    ],
+    imports: [
+        IonicModule.forRoot(MyApp)
+    ],
+    bootstrap: [IonicApp],
+    entryComponents: [
+        MyApp,
+        HomePage,
+        LoginPage,
+        PatientSignUpPage,
+        DoctorSignUpPage,
+        DoctorSignUp2Page,
+        SearchPage,
+        RendezVousPage,
+        ChatPage,
+        DoctorHomePage,
+        MediaPage,
+        PatientHomePage,
+        PatientAddPage,
+        AboutPage
 
-  ],
-  providers: [DoctorService, AppSettings,ChatService,PatientService,{provide: ErrorHandler, useClass: IonicErrorHandler}]
+    ],
+    providers: [DoctorService, AppSettings, ChatService, PatientService, {
+        provide: ErrorHandler,
+        useClass: IonicErrorHandler
+    }]
 
 })
 export class AppModule {
