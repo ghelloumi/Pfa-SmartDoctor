@@ -1,6 +1,7 @@
 import {NgModule, ErrorHandler} from '@angular/core';
 import {IonicApp, IonicModule, IonicErrorHandler} from 'ionic-angular';
 import {MyApp} from './app.component';
+
 import {HomePage} from '../pages/home/home';
 import {LoginPage} from "../pages/login/login";
 import {PatientSignUpPage} from "../pages/patient/patient-sign-up/patient-sign-up";
@@ -18,6 +19,8 @@ import { ChatService } from "../providers/chat-service";
 import {PatientHomePage} from "../pages/doctor/doctorHome/patient-home/patient-home";
 import {PatientAddPage} from "../pages/doctor/doctorHome/patient-home/patient-add/patient-add";
 import {PatientService} from "../providers/patient-service";
+import {WelcomePage} from "../pages/welcome/welcome";
+import {AboutPage} from "../pages/about/about";
 
 
 @NgModule({
@@ -35,7 +38,9 @@ import {PatientService} from "../providers/patient-service";
     DoctorHomePage,
     MediaPage,
     PatientHomePage,
-    PatientAddPage
+    PatientAddPage,
+    WelcomePage,
+    AboutPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -54,7 +59,9 @@ import {PatientService} from "../providers/patient-service";
     DoctorHomePage,
     MediaPage,
     PatientHomePage,
-    PatientAddPage
+    PatientAddPage,
+    WelcomePage,
+    AboutPage
 
   ],
   providers: [DoctorService, AppSettings,ChatService,PatientService,{provide: ErrorHandler, useClass: IonicErrorHandler}]

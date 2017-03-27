@@ -14,7 +14,6 @@ $font-path: "../assets/fonts";
 
 
 
-
 // Named Color Variables
 // --------------------------------------------------
 // Named colors makes it easy to reuse colors on various components.
@@ -36,7 +35,7 @@ $colors: (
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-
+$toolbar-ios-background:                   color($colors, primary);
 
 
 // App Material Design Variables
@@ -50,7 +49,7 @@ $colors: (
 // --------------------------------------------------
 // Windows only Sass variables can go here
 
-
+$toolbar-md-background:                   color($colors, primary);
 
 
 // App Theme

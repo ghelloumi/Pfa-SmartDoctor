@@ -112,7 +112,7 @@ var Review = mongoose.model('Review', {
     // Get reviews
     app.get('/api/reviews', function(req, res) {
 
-        console.log("fetching reviews");
+        console.log("fetching chat");
 
         // use mongoose to get all reviews in the database
         Review.find(function(err, reviews) {
@@ -128,7 +128,7 @@ var Review = mongoose.model('Review', {
     // create review and send back all reviews after creation
     app.post('/api/reviews', function(req, res) {
 
-        console.log("creating review");
+        console.log("creating chat");
 
         // create a review, information comes from request from Ionic
         Review.create({
@@ -166,7 +166,7 @@ var Patient = mongoose.model('Patient', {
     // Get reviews
     app.get('/api/addpatient', function(req, res) {
 
-        console.log("fetching addpatient");
+        console.log("fetching patient");
 
         // use mongoose to get all reviews in the database
         Patient.find(function(err, addpatient) {
@@ -182,7 +182,7 @@ var Patient = mongoose.model('Patient', {
     // create review and send back all reviews after creation
     app.post('/api/addpatient', function(req, res) {
 
-        console.log("creating addpatient");
+        console.log("creating patient");
 
         // create a review, information comes from request from Ionic
         Patient.create({
