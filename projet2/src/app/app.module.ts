@@ -19,7 +19,6 @@ import { ChatService } from "../providers/chat-service";
 import {PatientHomePage} from "../pages/doctor/doctorHome/patient-home/patient-home";
 import {PatientAddPage} from "../pages/doctor/doctorHome/patient-home/patient-add/patient-add";
 import {PatientService} from "../providers/patient-service";
-import {WelcomePage} from "../pages/welcome/welcome";
 import {AboutPage} from "../pages/about/about";
 
 
@@ -39,7 +38,6 @@ import {AboutPage} from "../pages/about/about";
     MediaPage,
     PatientHomePage,
     PatientAddPage,
-    WelcomePage,
     AboutPage
   ],
   imports: [
@@ -60,7 +58,6 @@ import {AboutPage} from "../pages/about/about";
     MediaPage,
     PatientHomePage,
     PatientAddPage,
-    WelcomePage,
     AboutPage
 
   ],
