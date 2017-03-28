@@ -6,10 +6,13 @@ var Doctor = require('./doctor');
  
 // POST
 // Create a new Doctor
-app.post('/doctors', function (req, res) {  
+app.post('/doctors', function (req, res) {
   if (!req.body.userName) {
     return res.status(400).send({ "success": false, "msg": "You need to fill all blanks!" });
   }
+
+
+    //+req.body.fullName+'.'+req.body.cin
  
   var newDoctor = new Doctor({ 
     fullName: req.body.fullName,
@@ -25,7 +28,7 @@ app.post('/doctors', function (req, res) {
     typeC: req.body.typeC
 
   });
- 
+
   newDoctor.save(function (err) {
     if (err) {
       console.log("some error: ", err);
@@ -34,6 +37,8 @@ app.post('/doctors', function (req, res) {
     res.status(201).send({ "success": true, "msg": 'Successful created new Doctor Account.' });
   });
 });
+
+
  
 
 
