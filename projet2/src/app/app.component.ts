@@ -16,7 +16,7 @@ export interface MenuItem {
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = DoctorSignUp2Page;
+  rootPage: any = DoctorSignUpPage;
 
   constructor(public platform: Platform) {
 

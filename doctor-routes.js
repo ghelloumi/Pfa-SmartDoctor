@@ -21,6 +21,7 @@ app.post('/doctors', function (req, res) {
     telNum: req.body.telNum,
     specialty: req.body.specialty,
     components: req.body.components,
+    picture: req.body.picture,
     typeC: req.body.typeC
 
   });

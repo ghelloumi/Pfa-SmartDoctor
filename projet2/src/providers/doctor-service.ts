@@ -18,7 +18,7 @@ export class DoctorService {
   }
 
 
-  public addDoctor(fullName, userName, email, cin, doctorNumber, password, telNum, specialty,components,typeC) {
+  public addDoctor(fullName, userName, email, cin, doctorNumber, password, telNum, specialty,components,pic,typeC) {
     return this.http.post(this.apiUrl + 'doctors', {
       'fullName': fullName,
       'userName': userName,
@@ -29,6 +29,7 @@ export class DoctorService {
       'telNum': telNum,
       'specialty': specialty,
       'components':components,
+      'picture':pic,
       'typeC':typeC
 
     })

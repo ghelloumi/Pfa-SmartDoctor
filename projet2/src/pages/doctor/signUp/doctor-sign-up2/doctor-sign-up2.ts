@@ -1,17 +1,16 @@
 import {Component} from '@angular/core';
 import {
-  NavController, NavParams, AlertController, ToastController, Loading,
-  ActionSheetController, Platform, LoadingController, ModalController
+  NavController, NavParams, AlertController, ToastController, Loading, Platform, LoadingController, ModalController
 } from 'ionic-angular';
 
 
-import {Camera, File, FilePath, Transfer} from 'ionic-native';
+import {Transfer} from 'ionic-native';
 import {DoctorService} from "../../../../providers/doctor-service";
 import {AppSettings} from "../../../../providers/app-settings";
 import {TakePicturePage} from "./take-picture/take-picture";
 
 declare var cordova: any;
-
+var a,b: string;
 
 @Component({
   selector: 'page-doctor-sign-up2',
@@ -20,9 +19,9 @@ declare var cordova: any;
 export class DoctorSignUp2Page {
   apiUrl = this.appSettings.getApiUrl();
 
-  lastImage: string = null;
   loading: Loading;
   component: string;
+  pic:string;
 
   fullName = this.navParams.get('fullName');
   userName = this.navParams.get('userName');
@@ -37,7 +36,11 @@ export class DoctorSignUp2Page {
     specialty: ''
   };
 
-  constructor(public modalCtrl: ModalController,public appSettings: AppSettings,public platform: Platform, public loadingCtrl: LoadingController, public actionSheetCtrl: ActionSheetController, public nav: NavController, public navParams: NavParams, private alertCtrl: AlertController, public toastCtrl: ToastController, public doctorService: DoctorService) {
+  constructor(public modalCtrl: ModalController,public appSettings: AppSettings,
+              public platform: Platform, public loadingCtrl: LoadingController,
+              public nav: NavController, public navParams: NavParams,
+              private alertCtrl: AlertController, public toastCtrl: ToastController,
+              public doctorService: DoctorService) {
   }
 
   ionViewDidLoad() {
@@ -84,112 +87,15 @@ export class DoctorSignUp2Page {
     alert.present();
   }
 
-
-  // ionic plugin add cordova-plugin-camera
-  // ionic plugin add cordova-plugin-file
-  // ionic plugin add cordova-plugin-file-transfer
-  // ionic plugin add cordova-plugin-filepath
-
-  public addPhoto() {
-    let actionSheet = this.actionSheetCtrl.create({
-      title: 'Select Image Source',
-      buttons: [
-        {
-          text: 'Load from Library',
-          handler: () => {
-            this.takePicture(Camera.PictureSourceType.PHOTOLIBRARY);
-          }
-        },
-        {
-          text: 'Use Camera',
-          handler: () => {
-            this.takePicture(Camera.PictureSourceType.CAMERA);
-          }
-        },
-        {
-          text: 'Cancel',
-          role: 'cancel'
-        }
-      ]
-    });
-    actionSheet.present();
-  }
-
-  public takePicture(sourceType) {
-    // Create options for the Camera Dialog
-    var options = {
-      quality: 100,
-      targetWidth: 1000,
-      targetHeight: 1000,
-      sourceType: sourceType,
-      saveToPhotoAlbum: false,
-      correctOrientation: true
-    };
-
-    // Get the data of an image
-    Camera.getPicture(options).then((imagePath) => {
-      // Special handling for Android library
-      if (this.platform.is('android') && sourceType === Camera.PictureSourceType.PHOTOLIBRARY) {
-        FilePath.resolveNativePath(imagePath)
-          .then(filePath => {
-            let correctPath = filePath.substr(0, filePath.lastIndexOf('/') + 1);
-            let currentName = imagePath.substring(imagePath.lastIndexOf('/') + 1, imagePath.lastIndexOf('?'));
-            this.copyFileToLocalDir(correctPath, currentName, this.createFileName());
-          });
-      } else {
-        var currentName = imagePath.substr(imagePath.lastIndexOf('/') + 1);
-        var correctPath = imagePath.substr(0, imagePath.lastIndexOf('/') + 1);
-        this.copyFileToLocalDir(correctPath, currentName, this.createFileName());
-      }
-    }, (err) => {
-      this.presentToast('Error while selecting image.');
-    });
-  }
-
-  // Create a new name for the image
-  private createFileName() {
-    var d = new Date(),
-      n = d.getTime(),
-      newFileName =  n + ".jpg";
-    return newFileName;
-  }
-
-// Copy the image to a local folder
-  private copyFileToLocalDir(namePath, currentName, newFileName) {
-    File.copyFile(namePath, currentName, cordova.file.dataDirectory, newFileName).then(success => {
-      this.lastImage = newFileName;
-    }, error => {
-      this.presentToast('Error while storing file.');
-    });
-  }
-
-  private presentToast(text) {
-    let toast = this.toastCtrl.create({
-      message: text,
-      duration: 3000,
-      position: 'top'
-    });
-    toast.present();
-  }
-
-// Always get the accurate path to your apps folder
-  public pathForImage(img) {
-    if (img === null) {
-      return '';
-    } else {
-      return cordova.file.dataDirectory + img;
-    }
-  }
-
-  public uploadImage() {
+  public uploadImage(c,d) {
     // Destination URL
     var url = this.apiUrl+"doctorsPics";
 
     // File for Upload
-    var targetPath = this.pathForImage(this.lastImage);
+    var targetPath =c;
 
     // File name only
-    var filename = this.lastImage;
+    var filename = d;
 
     var options = {
       fileKey: "file",
@@ -209,20 +115,21 @@ export class DoctorSignUp2Page {
     // Use the FileTransfer to upload the image
     fileTransfer.upload(targetPath, url, options).then(data => {
       this.loading.dismissAll()
-      this.presentToast('Image succesful uploaded.');
+      this.showToast('Image succesful uploaded.');
     }, err => {
       this.loading.dismissAll()
-      this.presentToast('Error while uploading file.');
+      this.showToast('Error while uploading file.');
     });
   }
-
 
 
   addPicture(){
 
     let modal = this.modalCtrl.create(TakePicturePage);
-    modal.onDidDismiss(review => {
-
+    modal.onDidDismiss(pic => {
+      a=pic.pic_path;
+      b=pic.pic_last;
+      this.pic="file-"+b;
     });
     modal.present();
 
@@ -238,6 +145,7 @@ export class DoctorSignUp2Page {
         {
           text: 'Yes',
           handler: data => {
+            this.uploadImage(a,b),
             this.doctorService.addDoctor(
               this.fullName,
               this.userName,
@@ -248,6 +156,7 @@ export class DoctorSignUp2Page {
               this.registerCredentials.telNum,
               this.registerCredentials.specialty,
               this.component,
+              this.pic,
               '1'
             ).subscribe(data => {
               this.showToast(data.msg);

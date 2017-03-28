@@ -38,6 +38,10 @@ components: {
         type: String,
         required: true
     },
+picture: {
+        type: String,
+        required: true
+    },
 typeC: {
 	type: String,
         required: true

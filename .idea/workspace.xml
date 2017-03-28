@@ -2,36 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a89a73df-e501-4f74-acd6-7145b429f18f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/assets/img/profile.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/assets/img/sidebar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/about/about.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/about/about.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/about/about.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/contact/contact.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/contact/contact.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/contact/contact.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/doctorHome/media/media.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/doctorHome/patient-home/patient-add/patient-add.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/doctorHome/patient-home/patient-home.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/doctorHome/rendezVous/rendezVous.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/doctorHome/search/search.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up/doctor-sign-up.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/doctor-sign-up2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/take-picture/take-picture.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/take-picture/take-picture.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/take-picture/take-picture.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/take-picture/take-picture.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/login/login.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/patient/patient-sign-up/patient-sign-up.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/welcome/welcome.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/welcome/welcome.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/welcome/welcome.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/providers/app-settings.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/providers/doctor-service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/providers/patient-service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/readme" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doctorsPics/file-1490376143834.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor-routes.js" afterPath="$PROJECT_DIR$/doctor-routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor.js" afterPath="$PROJECT_DIR$/doctor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet2/src/app/app.component.ts" afterPath="$PROJECT_DIR$/projet2/src/app/app.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/doctor-sign-up2.html" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/doctor-sign-up2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/doctor-sign-up2.ts" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/doctor-sign-up2.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/take-picture/take-picture.html" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/take-picture/take-picture.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/take-picture/take-picture.ts" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/take-picture/take-picture.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet2/src/providers/app-settings.ts" afterPath="$PROJECT_DIR$/projet2/src/providers/app-settings.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet2/src/providers/doctor-service.ts" afterPath="$PROJECT_DIR$/projet2/src/providers/doctor-service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -55,72 +37,58 @@
       <file leaf-file-name="doctor-sign-up2.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/doctor-sign-up2.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="223" column="9" lean-forward="false" selection-start-line="223" selection-start-column="9" selection-end-line="223" selection-end-column="9" />
+            <state relative-caret-position="486">
+              <caret line="155" column="23" lean-forward="false" selection-start-line="155" selection-start-column="23" selection-end-line="155" selection-end-column="23" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
                 <element signature="n#!!block;n#showCheckbox#0;n#DoctorSignUp2Page#0" expanded="false" />
-                <element signature="n#!!block;n#addPhoto#0;n#DoctorSignUp2Page#0" expanded="false" />
-                <element signature="n#!!block;n#takePicture#0;n#DoctorSignUp2Page#0" expanded="false" />
-                <element signature="n#!!block;n#createFileName#0;n#DoctorSignUp2Page#0" expanded="false" />
-                <element signature="n#!!block;n#copyFileToLocalDir#0;n#DoctorSignUp2Page#0" expanded="false" />
-                <element signature="n#!!block;n#presentToast#0;n#DoctorSignUp2Page#0" expanded="false" />
-                <element signature="n#!!block;n#pathForImage#0;n#DoctorSignUp2Page#0" expanded="false" />
-                <element signature="n#!!block;n#uploadImage#0;n#DoctorSignUp2Page#0" expanded="false" />
-                <element signature="n#!!block;n#addDoctor#0;n#DoctorSignUp2Page#0" expanded="false" />
+                <element signature="n#!!block;n#showToast#0;n#DoctorSignUp2Page#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="take-picture.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/take-picture/take-picture.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="take-picture.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/take-picture/take-picture.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="40" lean-forward="true" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="take-picture.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/take-picture/take-picture.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chat-service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projet2/src/providers/chat-service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projet2/src/app/app.module.ts">
+      <file leaf-file-name="doctor-service.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/projet2/src/providers/doctor-service.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
-              <caret line="42" column="19" lean-forward="false" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+              <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="43" column="61" lean-forward="false" selection-start-line="43" selection-start-column="61" selection-end-line="43" selection-end-column="61" />
               <folding>
-                <element signature="e#0#53#0" expanded="true" />
+                <element signature="e#3200#3818#0" expanded="false" />
+                <element signature="e#3904#3981#0" expanded="false" />
+                <element signature="e#4065#4464#0" expanded="false" />
+                <element signature="e#4581#5223#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="doctor-routes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/doctor-routes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" column="32" lean-forward="false" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="doctor.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/doctor.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -141,9 +109,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/projet2/src/pages/chat/chat.scss" />
-        <option value="$PROJECT_DIR$/projet2/src/pages/add-patient/add-patient.ts" />
-        <option value="$PROJECT_DIR$/projet2/src/pages/addPatientHome/addPatientHome.ts" />
         <option value="$PROJECT_DIR$/projet2/src/pages/chat/chat.ts" />
         <option value="$PROJECT_DIR$/projet2/src/pages/doctor-sign-up2/doctor-sign-up2.ts" />
         <option value="$PROJECT_DIR$/projet2/src/pages/doctorHome/doctorHome.ts" />
@@ -161,7 +126,6 @@
         <option value="$PROJECT_DIR$/projet2/src/pages/doctor/doctorHome/patient-home/patient-home.ts" />
         <option value="$PROJECT_DIR$/projet2/src/providers/chat-service.ts" />
         <option value="$PROJECT_DIR$/projet2/src/providers/patient-service.ts" />
-        <option value="$PROJECT_DIR$/projet2/src/providers/app-settings.ts" />
         <option value="$PROJECT_DIR$/projet2/src/pages/doctor/doctorHome/patient-home/patient-add/patient-add.ts" />
         <option value="$PROJECT_DIR$/projet2/src/app/app.html" />
         <option value="$PROJECT_DIR$/projet2/src/app/app.scss" />
@@ -184,14 +148,18 @@
         <option value="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up/doctor-sign-up.scss" />
         <option value="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/doctor-sign-up2.scss" />
         <option value="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up/doctor-sign-up.html" />
-        <option value="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/doctor-sign-up2.html" />
         <option value="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up/doctor-sign-up.ts" />
         <option value="$PROJECT_DIR$/projet2/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/projet2/src/app/app.component.ts" />
-        <option value="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/doctor-sign-up2.ts" />
         <option value="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/take-picture/take-picture.scss" />
         <option value="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/take-picture/take-picture.html" />
         <option value="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/take-picture/take-picture.ts" />
+        <option value="$PROJECT_DIR$/projet2/src/providers/app-settings.ts" />
+        <option value="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/doctor-sign-up2.html" />
+        <option value="$PROJECT_DIR$/projet2/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/doctor-routes.js" />
+        <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/doctor-sign-up2.ts" />
+        <option value="$PROJECT_DIR$/projet2/src/providers/doctor-service.ts" />
       </list>
     </option>
   </component>
@@ -208,10 +176,9 @@
     <handled-path value="$PROJECT_DIR$/projet2/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="43" />
-    <option name="y" value="187" />
-    <option name="width" value="1354" />
-    <option name="height" value="685" />
+    <option name="y" value="24" />
+    <option name="width" value="1920" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -311,6 +278,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projetPfa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projetPfa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="providers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -671,7 +660,7 @@
       <workItem from="1490525730885" duration="5348000" />
       <workItem from="1490612662535" duration="2096000" />
       <workItem from="1490623132383" duration="4686000" />
-      <workItem from="1490637621346" duration="21795000" />
+      <workItem from="1490637621346" duration="26844000" />
     </task>
     <task id="LOCAL-00001" summary="hh">
       <created>1490527830165</created>
@@ -722,18 +711,25 @@
       <option name="project" value="LOCAL" />
       <updated>1490660635847</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="hh">
+      <created>1490660729677</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1490660729677</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57189000" />
+    <option name="totallyTimeSpent" value="62238000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="43" y="187" width="1354" height="685" extended-state="0" />
+    <frame x="0" y="24" width="1920" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29075882" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20400633" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21635434" sideWeight="0.5072917" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282365" sideWeight="0.49270833" order="1" side_tool="false" content_ui="tabs" />
@@ -741,7 +737,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11413969" sideWeight="0.47916666" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06993737" sideWeight="0.47916666" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -831,32 +827,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="15" />
+      <option name="time" value="17" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/projet2/src/providers/patient-service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="42" column="32" lean-forward="false" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projet2/src/pages/doctor/doctorHome/patient-home/patient-add/patient-add.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projet2/src/pages/about/about.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projet2/src/app/main.prod.ts" />
     <entry file="file://$PROJECT_DIR$/projet2/www/service-worker.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -869,22 +844,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projet2/src/providers/app-settings.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projet2/src/providers/doctor-service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="93" lean-forward="false" selection-start-line="20" selection-start-column="93" selection-end-line="20" selection-end-column="93" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1137,14 +1096,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/doctor-sign-up2.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up/doctor-sign-up.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
@@ -1160,51 +1111,6 @@
         <state relative-caret-position="60">
           <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projet2/src/providers/chat-service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projet2/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="42" column="19" lean-forward="false" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projet2/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/doctor-sign-up2.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="223" column="9" lean-forward="false" selection-start-line="223" selection-start-column="9" selection-end-line="223" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-            <element signature="n#!!block;n#showCheckbox#0;n#DoctorSignUp2Page#0" expanded="false" />
-            <element signature="n#!!block;n#addPhoto#0;n#DoctorSignUp2Page#0" expanded="false" />
-            <element signature="n#!!block;n#takePicture#0;n#DoctorSignUp2Page#0" expanded="false" />
-            <element signature="n#!!block;n#createFileName#0;n#DoctorSignUp2Page#0" expanded="false" />
-            <element signature="n#!!block;n#copyFileToLocalDir#0;n#DoctorSignUp2Page#0" expanded="false" />
-            <element signature="n#!!block;n#presentToast#0;n#DoctorSignUp2Page#0" expanded="false" />
-            <element signature="n#!!block;n#pathForImage#0;n#DoctorSignUp2Page#0" expanded="false" />
-            <element signature="n#!!block;n#uploadImage#0;n#DoctorSignUp2Page#0" expanded="false" />
-            <element signature="n#!!block;n#addDoctor#0;n#DoctorSignUp2Page#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1224,14 +1130,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/doctor-sign-up2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="58" column="13" lean-forward="false" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/take-picture/take-picture.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1240,18 +1138,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/take-picture/take-picture.ts">
+    <entry file="file://$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/doctor-sign-up2.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+        <state relative-caret-position="210">
+          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/take-picture/take-picture.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#ion-header#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#ion-row#1;n#ion-col#0;n#ion-content#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/take-picture/take-picture.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1293">
+          <caret line="110" column="0" lean-forward="true" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+            <element signature="e#1085#1126#0" expanded="false" />
+            <element signature="n#!!block;n#presentToast#0;n#TakePicturePage#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projet2/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="42" column="19" lean-forward="false" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/doctor-sign-up2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="47" lean-forward="false" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projet2/src/providers/app-settings.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projet2/src/providers/chat-service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projet2/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doctor.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="40" lean-forward="true" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doctor-routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="32" lean-forward="false" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="43" column="61" lean-forward="false" selection-start-line="43" selection-start-column="61" selection-end-line="43" selection-end-column="61" />
+          <folding>
+            <element signature="e#3200#3818#0" expanded="false" />
+            <element signature="e#3904#3981#0" expanded="false" />
+            <element signature="e#4065#4464#0" expanded="false" />
+            <element signature="e#4581#5223#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/doctor-sign-up2.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="155" column="23" lean-forward="false" selection-start-line="155" selection-start-column="23" selection-end-line="155" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+            <element signature="n#!!block;n#showCheckbox#0;n#DoctorSignUp2Page#0" expanded="false" />
+            <element signature="n#!!block;n#showToast#0;n#DoctorSignUp2Page#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projet2/src/providers/doctor-service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
           <folding />
         </state>
       </provider>
