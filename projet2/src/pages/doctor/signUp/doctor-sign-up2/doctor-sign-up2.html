@@ -1,69 +1,75 @@
-<ion-header>
-  <ion-navbar color="dark">
+<ion-header style="background-color:#ffb7d9">
+  <ion-navbar newcolor>
     <ion-title>Register</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content class="login-content" padding>
-  <div class="login-box">
+<ion-content padding>
+  <form (ngSubmit)="addDoctor()" #registerForm="ngForm">
 
-    <form (ngSubmit)="addDoctor()" #registerForm="ngForm">
+    <ion-col>
       <ion-row>
-        <ion-col>
-          <ion-list inset>
-
-            <ion-item>
-              <ion-label>
-                <ion-icon name="person"></ion-icon>
-              </ion-label>
-              <ion-input type="text" class="text-input-style" placeholder="Telephone Number" name="telNum"
-                         [(ngModel)]="registerCredentials.telNum" required></ion-input>
-            </ion-item>
-            <br>
-            <ion-item>
-              <ion-label>
-                <ion-icon name="person"></ion-icon>
-              </ion-label>
-              <ion-input type="text" class="text-input-style" placeholder="Specialty" name="specialty"
-                         [(ngModel)]="registerCredentials.specialty" required></ion-input>
-            </ion-item>
-            <br>
-          </ion-list>
-        </ion-col>
+        <ion-item>
+          <ion-label>
+            <ion-icon name="person"></ion-icon>
+          </ion-label>
+          <ion-input type="text" placeholder="Telephone Number" name="telNum"
+                     [(ngModel)]="registerCredentials.telNum" required></ion-input>
+        </ion-item>
+        <br>
       </ion-row>
-
       <ion-row>
-        <ion-col class="signup-col">
-          <button ion-button class="submit-btn2" full type="button" (click)="showCheckbox()">Components</button>
-        </ion-col>
+        <ion-item>
+          <ion-label>
+            <ion-icon name="person"></ion-icon>
+          </ion-label>
+          <ion-input type="text" placeholder="Specialty" name="specialty"
+                     [(ngModel)]="registerCredentials.specialty" required></ion-input>
+        </ion-item>
+        <br>
       </ion-row>
-      <br>
+    </ion-col>
 
-      <ion-row>
-        <ion-col class="signup-col">
-          <button ion-button class="submit-btn2" full type="button" (click)="addPhoto()">Add Photo</button>
-        </ion-col>
 
-        <ion-col class="signup-col">
-          <button ion-button class="submit-btn2" full type="button" (click)="uploadImage()">Add Photo</button>
-        </ion-col>
-      </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button class="next-button" full type="button" (click)="showCheckbox()">Components</button>
+      </ion-col>
+    </ion-row>
+    <br>
 
-      <ion-row >
-        <img src="{{pathForImage(lastImage)}}" style="width: 100%" [hidden]="lastImage === null">
-        <h3 [hidden]="lastImage !== null">Please Select Image!</h3>
-      </ion-row>
-      <br>
+    <ion-row>
+      <ion-col >
+        <button ion-button class="next-button" full type="button" (click)="addPhoto()">Add Photo</button>
+      </ion-col>
 
-      <ion-row>
-        <ion-col class="signup-col">
-          <button ion-button class="submit-btn" full type="submit"
-                  [disabled]="!registerForm.form.valid ">Next
-            <ion-icon name="arrow-forward"></ion-icon>
-          </button>
-        </ion-col>
-      </ion-row>
+      <ion-col >
+        <button ion-button class="next-button" full type="button" (click)="uploadImage()">Add Photo</button>
+      </ion-col>
 
-    </form>
-  </div>
+    </ion-row>
+
+
+
+    <ion-col>
+      <button ion-button class="next-button" full type="button" (click)="addPicture()">Add PhotoCust</button>
+    </ion-col>
+
+
+    <ion-row>
+      <img src="{{pathForImage(lastImage)}}" style="width: 100%" [hidden]="lastImage === null">
+      <h3 [hidden]="lastImage !== null"></h3>
+    </ion-row>
+    <br>
+
+    <ion-row>
+      <ion-col class="signup-col">
+        <button ion-button class="submit-btn" full type="submit"
+                [disabled]="!registerForm.form.valid ">Next
+          <ion-icon name="arrow-forward"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </form>
 </ion-content>

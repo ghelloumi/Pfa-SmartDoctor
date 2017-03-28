@@ -1,24 +1,37 @@
-import {Component, ViewChild} from '@angular/core';
-import { Nav,Platform } from 'ionic-angular';
+import { Component} from '@angular/core';
+import {Platform} from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
-import {WelcomePage} from "../pages/welcome/welcome";
 
+import {HomePage} from "../pages/home/home";
+import {DoctorSignUp2Page} from "../pages/doctor/signUp/doctor-sign-up2/doctor-sign-up2";
+import {DoctorSignUpPage} from "../pages/doctor/signUp/doctor-sign-up/doctor-sign-up";
 
+export interface MenuItem {
+  title: string;
+  component: any;
+  icon: string;
+}
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  @ViewChild(Nav) nav: Nav;
+  rootPage: any = DoctorSignUp2Page;
 
-  rootPage = WelcomePage;
+  constructor(public platform: Platform) {
 
+    this.initializeApp();
+  }
 
-  constructor(platform: Platform) {
-    platform.ready().then(() => {
+  //
+  // getActivePage(): string {
+  //   return this.navCtrl.getActive().name;
+  // }
+
+  initializeApp() {
+    this.platform.ready().then(() => {
       StatusBar.styleLightContent();
       Splashscreen.hide();
     });
-
   }
 }

@@ -1,59 +1,51 @@
-<ion-content class="login-content" padding>
-  <div padding>
+<ion-header style="background-color:#ffb7d9">
 
-    <ion-row>
-      <ion-col>
-        <p class="welcome-title">Sm@rt Doctor</p>
-      </ion-col>
-    </ion-row>
+  <ion-navbar newcolor>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>home</ion-title>
+  </ion-navbar>
+</ion-header>
 
 
-    <form (ngSubmit)="login()" #registerForm="ngForm">
-      <ion-row [@bounceInBottom]="formState">
-        <ion-col>
-          <ion-list inset>
-            <ion-item>
-              <ion-label>
-                <ion-icon name="person"></ion-icon>
-              </ion-label>
-              <ion-input type="text" placeholder="Email" name="email"
-                         [(ngModel)]="registerCredentials.email" required></ion-input>
-            </ion-item>
+<ion-content padding>
 
-            <ion-item>
-              <ion-label>
-                <ion-icon name="lock"></ion-icon>
-              </ion-label>
-              <ion-input type="password" placeholder="Password" name="password"
-                         [(ngModel)]="registerCredentials.password" required></ion-input>
-            </ion-item>
-          </ion-list>
-        </ion-col>
+  <form (ngSubmit)="login()" #registerForm="ngForm">
+    <ion-col [@bounceInBottom]="formState">
+
+      <ion-row>
+        <ion-item>
+          <ion-label>
+            <ion-icon name="person"></ion-icon>
+          </ion-label>
+          <ion-input type="text" placeholder="Email" name="email"
+                     [(ngModel)]="registerCredentials.email" required>
+          </ion-input>
+        </ion-item>
       </ion-row>
 
-      <ion-row [@fadeIn]="loginState">
-        <ion-col class="signup-col">
-          <button ion-button class="login-button" full type="submit" [disabled]="!registerForm.form.valid">
-            Login
-          </button>
-
-
-          <button ion-button block clear (click)="loginSplash()">Forgesdsdsds password?</button>
-
-
-        </ion-col>
+      <ion-row>
+        <ion-item>
+          <ion-label>
+            <ion-icon name="lock"></ion-icon>
+          </ion-label>
+          <ion-input type="password" placeholder="Password" name="password"
+                     [(ngModel)]="registerCredentials.password" required></ion-input>
+        </ion-item>
       </ion-row>
-    </form>
 
-    <ion-row [@bounceInBottom]="formState">
-      <ion-col>
-        <button ion-button block clear [@fadeIn]="loginState">Forget password?</button>
-        <button ion-button block clear [@fadeIn]="loginState" (click)="showChose()">
-          Sign-in
-        </button>
-      </ion-col>
-    </ion-row>
+    </ion-col>
 
-  </div>
+    <ion-col  [@fadeIn]="loginState">
+      <button ion-button class="login-button" full type="submit" [disabled]="!registerForm.form.valid">Login</button>
+    </ion-col>
+  </form>
+
+  <ion-col [@bounceInBottom]="formState">
+    <button ion-button block clear [@fadeIn]="loginState" class="buttons">Forget password?</button>
+    <button ion-button block clear [@fadeIn]="loginState" (click)="showChose()" class="buttons">Sign-in</button>
+  </ion-col>
+
 
 </ion-content>

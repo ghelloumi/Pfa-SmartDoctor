@@ -5,27 +5,10 @@
       display:flex;
       flex-direction: column;
       overflow:hidden;
-      background: url("../assets/img/bg-banner.jpg") no-repeat center center fixed;
+      background: url("../../assets/img/bg-banner.jpg") no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       background-size: cover;
-    }
-
-    img {
-      width: 100%;
-      height:300px;
-      margin:auto;
-    }
-
-
-    ion-row {
-      align-items: center;
-      text-align: center;
-    }
-
-
-    ion-list {
-      margin: 0;
     }
 
     .login-button {
@@ -36,42 +19,24 @@
       background-color: rgba(57, 172, 220, 0.8);
     }
 
-
-
-
-
-    ion-item {
-      border-radius: 30px !important;
-      padding-left: 10px !important;
-      margin-bottom: 1px;
-      background-color: #f6f6f6;
-      opacity: 0.7;
-      font-weight: bold;
-      font-size: 1em;
-      font-style: inherit;
-      border-color: inherit;
-      border: 1px solid #fff;
-    }
-
-
     *::-webkit-input-placeholder {
       color: #aba5a6;
     }
-    .forget-password{
-      width: 70%;
-      border-radius: 5px;
-      font-size: 1.2em;
-      border: 1px solid #fff;
-      background-color: rgba(57, 172, 220, 0.8);
-      font-size: 14px;
+
+    form{
+      margin-top: 20%;
     }
 
-    .welcome-title{
-      color: rgb(255, 145, 145);
-      font-size: 50px;
-      border-radius: 20px;
-      text-shadow: rgb(3, 3, 3) 4px 4px 4px;
+    .buttons{
+      color: #4177cd;
+      text-shadow: #fff 0 0 10px;
     }
+
+    ion-item{
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
   }
 
 }

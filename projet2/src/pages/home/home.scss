@@ -1,4 +1,8 @@
 page-home {
+  ion-list{
+    background-color: #16ceb0;
+    //background-image: url("../../assets/img/sidebar.png");
+  }
   .welcome-title{
     color: rgb(255, 145, 145);
     font-size: 80px;
@@ -10,7 +14,10 @@ page-home {
     text-align: center;
 
   }
+  .menu-logo {
+    height: 150px;
+    margin: 20px 20px 20px 70px;
+    border-radius: 20px;
 
-
-
+  }
 }

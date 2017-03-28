@@ -1,5 +1,28 @@
-<ion-content>
+<ion-menu [content]="content" >
+  <ion-header>
+    <ion-toolbar  style="background-color: #C2A5A5 !important" >
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-  <photo-tilt tiltImage="https://www.iaspaper.net/wp-content/uploads/2017/01/Doctor.jpg">  </photo-tilt>
-  <button ion-button block clear  (click)="bienvenue()">welcome to dector interface</button>
-</ion-content>
+  <ion-content >
+    <ion-list >
+      <img src="../../assets/img/logo.jpg" class="menu-logo"/>
+      <ion-list-header>Home</ion-list-header>
+      <button [class.activePageHighlight]="checkActive(p)" menuClose ion-item *ngFor="let p of homeMenuItems" (click)="openPage(p)" >
+        <ion-icon item-left [name]="p.icon"></ion-icon>
+        {{p.title}}
+      </button>
+      <br><br>
+      <ion-list-header>Help</ion-list-header>
+      <button [class.activePageHighlight]="checkActive(p)" menuClose ion-item *ngFor="let p of helpMenuItems" (click)="openPage(p)" >
+        <ion-icon item-left [name]="p.icon"></ion-icon>
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

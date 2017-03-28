@@ -1,20 +1,24 @@
 import {Component} from '@angular/core';
 import {
   NavController, NavParams, AlertController, ToastController, Loading,
-  ActionSheetController, Platform, LoadingController
+  ActionSheetController, Platform, LoadingController, ModalController
 } from 'ionic-angular';
 
 
 import {Camera, File, FilePath, Transfer} from 'ionic-native';
 import {DoctorService} from "../../../../providers/doctor-service";
+import {AppSettings} from "../../../../providers/app-settings";
+import {TakePicturePage} from "./take-picture/take-picture";
 
 declare var cordova: any;
+
 
 @Component({
   selector: 'page-doctor-sign-up2',
   templateUrl: 'doctor-sign-up2.html'
 })
 export class DoctorSignUp2Page {
+  apiUrl = this.appSettings.getApiUrl();
 
   lastImage: string = null;
   loading: Loading;
@@ -33,14 +37,12 @@ export class DoctorSignUp2Page {
     specialty: ''
   };
 
-  constructor(public platform: Platform, public loadingCtrl: LoadingController, public actionSheetCtrl: ActionSheetController, public nav: NavController, public navParams: NavParams, private alertCtrl: AlertController, public toastCtrl: ToastController, public doctorService: DoctorService) {
+  constructor(public modalCtrl: ModalController,public appSettings: AppSettings,public platform: Platform, public loadingCtrl: LoadingController, public actionSheetCtrl: ActionSheetController, public nav: NavController, public navParams: NavParams, private alertCtrl: AlertController, public toastCtrl: ToastController, public doctorService: DoctorService) {
   }
-
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DoctorSignUp2Page');
   }
-
 
   showCheckbox() {
     let alert = this.alertCtrl.create();
@@ -83,10 +85,10 @@ export class DoctorSignUp2Page {
   }
 
 
-    // ionic plugin add cordova-plugin-camera
-    // ionic plugin add cordova-plugin-file
-    // ionic plugin add cordova-plugin-file-transfer
-    // ionic plugin add cordova-plugin-filepath
+  // ionic plugin add cordova-plugin-camera
+  // ionic plugin add cordova-plugin-file
+  // ionic plugin add cordova-plugin-file-transfer
+  // ionic plugin add cordova-plugin-filepath
 
   public addPhoto() {
     let actionSheet = this.actionSheetCtrl.create({
@@ -181,7 +183,7 @@ export class DoctorSignUp2Page {
 
   public uploadImage() {
     // Destination URL
-    var url = "http://192.168.0.55:3001/doctorsPics";
+    var url = this.apiUrl+"doctorsPics";
 
     // File for Upload
     var targetPath = this.pathForImage(this.lastImage);
@@ -216,7 +218,15 @@ export class DoctorSignUp2Page {
 
 
 
+  addPicture(){
 
+    let modal = this.modalCtrl.create(TakePicturePage);
+    modal.onDidDismiss(review => {
+
+    });
+    modal.present();
+
+  }
 
   addDoctor() {
     let prompt = this.alertCtrl.create({
