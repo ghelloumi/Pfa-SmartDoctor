@@ -1,0 +1,22 @@
+<ion-header style="background-color:#ffb7d9">
+  <ion-navbar newcolor>
+    <ion-title>Take Photo</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="add-review">
+
+  <ion-col>
+
+    <ion-row>
+      <button ion-button class="next-button" full type="button" (click)="addPhoto()">Add Photo</button>
+    </ion-row>
+
+
+    <ion-row >
+      <div class="picture"  ></div>
+    </ion-row>
+    <button ion-button class="next-button" full type="button" (click)="save()">Save</button>
+    <button ion-button class="next-button" full type="button" (click)="cancel()">Cancel</button>
+  </ion-col>
+</ion-content>

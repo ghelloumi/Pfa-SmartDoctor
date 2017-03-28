@@ -2,66 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a89a73df-e501-4f74-acd6-7145b429f18f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/assets/img/logo.jpg" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/bb.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/aa.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/az.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/bb.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/blog.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/cc.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/dd.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/ee.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/images (1).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/images (2).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/images.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/images.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/qq.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/rende.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/server.tar.gz - Google Drive.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/server.tar.gz - Google Drive_files/1769065656-projector_viewer__fr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/server.tar.gz - Google Drive_files/2925214838-projector_css_ltr.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/server.tar.gz - Google Drive_files/882870864-postmessagerelay.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/server.tar.gz - Google Drive_files/cb=gapi(1).loaded_0" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/server.tar.gz - Google Drive_files/cb=gapi(2).loaded_0" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/server.tar.gz - Google Drive_files/cb=gapi.loaded_0" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/server.tar.gz - Google Drive_files/cb=gapi.loaded_1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/server.tar.gz - Google Drive_files/client.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/server.tar.gz - Google Drive_files/postmessageRelay.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/server.tar.gz - Google Drive_files/proxy(1).html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/server.tar.gz - Google Drive_files/proxy.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/server.tar.gz - Google Drive_files/rpc-shindig_random.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/server.tar.gz - Google Drive_files/rs=AA2YrTsIoECaUS3Vl_v5tQjn7r9H46qCWw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/server.tar.gz - Google Drive_files/rs=AA2YrTsvTDafHzVh0Q7WsPVY3mh2VYYYVw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/server.tar.gz - Google Drive_files/saved_resource.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/slide_brokers.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/slide_favorites.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/slide_properties.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/ww.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projet2/src/assets/img/zz.jpg" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/assets/img/profile.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/assets/img/sidebar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/about/about.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/about/about.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/about/about.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/contact/contact.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/contact/contact.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/contact/contact.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/doctorHome/media/media.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/doctorHome/patient-home/patient-add/patient-add.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/doctorHome/patient-home/patient-home.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/doctorHome/rendezVous/rendezVous.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/doctorHome/search/search.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up/doctor-sign-up.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/doctor-sign-up2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/take-picture/take-picture.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/take-picture/take-picture.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/take-picture/take-picture.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/take-picture/take-picture.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/login/login.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/patient/patient-sign-up/patient-sign-up.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/welcome/welcome.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/welcome/welcome.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/pages/welcome/welcome.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/providers/app-settings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/providers/doctor-service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projet2/src/providers/patient-service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/readme" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet2/src/app/app.component.ts" afterPath="$PROJECT_DIR$/projet2/src/app/app.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet2/src/app/app.html" afterPath="$PROJECT_DIR$/projet2/src/app/app.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet2/src/app/app.module.ts" afterPath="$PROJECT_DIR$/projet2/src/app/app.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet2/src/pages/doctor/doctorHome/doctorHome.scss" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/doctorHome/doctorHome.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up/doctor-sign-up.html" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up/doctor-sign-up.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up/doctor-sign-up.scss" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up/doctor-sign-up.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/doctor-sign-up2.html" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/doctor-sign-up2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/doctor-sign-up2.scss" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/doctor-sign-up2.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/doctor-sign-up2.ts" afterPath="$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/doctor-sign-up2.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet2/src/pages/home/home.html" afterPath="$PROJECT_DIR$/projet2/src/pages/home/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet2/src/pages/home/home.scss" afterPath="$PROJECT_DIR$/projet2/src/pages/home/home.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet2/src/pages/home/home.ts" afterPath="$PROJECT_DIR$/projet2/src/pages/home/home.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet2/src/pages/login/login.html" afterPath="$PROJECT_DIR$/projet2/src/pages/login/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet2/src/pages/login/login.scss" afterPath="$PROJECT_DIR$/projet2/src/pages/login/login.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet2/src/theme/variables.scss" afterPath="$PROJECT_DIR$/projet2/src/theme/variables.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -116,11 +86,9 @@
       <file leaf-file-name="take-picture.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/take-picture/take-picture.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-              <folding>
-                <element signature="n#style#0;n#ion-header#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="40" lean-forward="true" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -240,8 +208,8 @@
     <handled-path value="$PROJECT_DIR$/projet2/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-42" />
-    <option name="y" value="266" />
+    <option name="x" value="43" />
+    <option name="y" value="187" />
     <option name="width" value="1354" />
     <option name="height" value="685" />
   </component>
@@ -703,7 +671,7 @@
       <workItem from="1490525730885" duration="5348000" />
       <workItem from="1490612662535" duration="2096000" />
       <workItem from="1490623132383" duration="4686000" />
-      <workItem from="1490637621346" duration="21678000" />
+      <workItem from="1490637621346" duration="21795000" />
     </task>
     <task id="LOCAL-00001" summary="hh">
       <created>1490527830165</created>
@@ -747,14 +715,21 @@
       <option name="project" value="LOCAL" />
       <updated>1490624179592</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="hh">
+      <created>1490660635847</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1490660635847</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57072000" />
+    <option name="totallyTimeSpent" value="57189000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-42" y="266" width="1354" height="685" extended-state="0" />
+    <frame x="43" y="187" width="1354" height="685" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1275,11 +1250,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/projet2/src/pages/doctor/signUp/doctor-sign-up2/take-picture/take-picture.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#ion-header#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="40" lean-forward="true" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
