@@ -1,0 +1,22 @@
+<!--
+  Generated template for the DoctorHomeMenu page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-tabs>
+  <ion-tab [root]="tab0Root" tabTitle="Profile" tabIcon="home" (ionSelect)="changeTitle(0)"></ion-tab>
+  <ion-tab [root]="tab1Root" tabTitle="Chat" tabIcon="chatboxes" (ionSelect)="changeTitle(1)"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="Patients" tabIcon="contacts" (ionSelect)="changeTitle(2)"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="Calendar" tabIcon="calendar" (ionSelect)="changeTitle(3)"></ion-tab>
+</ion-tabs>

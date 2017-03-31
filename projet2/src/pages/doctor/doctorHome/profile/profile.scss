@@ -1,0 +1,83 @@
+page-profile {
+  /* Profile container */
+  ion-content{
+    box-sizing: content-box;
+    font: normal 16px/1 "Times New Roman", Times, serif;
+    color: rgba(255,255,255,1);
+    text-align: center;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    background: linear-gradient(180deg, rgba(22, 167, 138,1) 0,rgba(248,248,248,1) 100%);
+    background-position: 50% 50%;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-size: auto auto;
+  }
+
+  .banner {
+    content: url(../../../../assets/img/profileppbanner.jpg);
+
+    filter: blur(4px);
+    height: 44%;
+    width: 100%;
+  }
+
+  .img-circle{
+    position:absolute;
+    top:0;
+    bottom: 0;
+    margin-left: -26%;
+
+    border-radius: 50%;
+    margin-top: 5%;
+    width: 200px;
+    height: 200px;
+    box-shadow: 10px -15px 60px rgba(14, 66, 49, 0.8);
+    filter: blur(0px);
+    border:20px ridge #58c8d8;
+    border-width:8px;
+    border-style:ridge;
+    border-color:#58c8d8;
+  }
+
+
+  .line-separator{
+    margin-top: 3%;
+    height:1px;
+    background:#717171;
+    box-shadow: #0c0663;
+    border-bottom:1px solid #313030;
+    border-left: 2px solid black;
+    box-shadow:4px 0 9px rgba(86,170,255,0.9);
+  }
+  .name {
+    margin-top: 1%;
+    box-sizing: content-box;
+    font: normal normal bold 28px/1 "Comic Sans MS", cursive, sans-serif;
+    color: rgb(47, 88, 132);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    text-shadow: 4px 0 9px rgba(86,170,255,0.9) ;
+  }
+
+  .containerprofile{
+    margin-top: 3%;
+    margin-right: 3%;
+    margin-left: 3%;
+    border-radius: 10%;
+    border:20px ridge #58c8d8;
+    border-width:8px;
+    border-style:ridge;
+    border-color:#58c8d8;
+    height: 220px;
+  }
+
+  .buttons{
+    padding-top: 2%;
+  }
+
+  .slides{
+    padding-top: 5%;
+  }
+
+}

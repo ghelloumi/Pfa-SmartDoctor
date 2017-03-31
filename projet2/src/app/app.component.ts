@@ -3,8 +3,7 @@ import {Platform} from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import {HomePage} from "../pages/home/home";
-import {DoctorSignUp2Page} from "../pages/doctor/signUp/doctor-sign-up2/doctor-sign-up2";
-import {DoctorSignUpPage} from "../pages/doctor/signUp/doctor-sign-up/doctor-sign-up";
+import {DoctorHomeMenuPage} from "../pages/doctor/doctorHome/doctor-home-menu/doctor-home-menu";
 
 export interface MenuItem {
   title: string;
@@ -16,7 +15,7 @@ export interface MenuItem {
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = DoctorSignUpPage;
+  rootPage: any = DoctorHomeMenuPage;
 
   constructor(public platform: Platform) {
 

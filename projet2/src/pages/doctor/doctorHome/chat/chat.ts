@@ -23,18 +23,6 @@ export class ChatPage {
     });
   }
 
-  // send(msg) {
-  //   if (msg != '') {
-  //     this.socket.emit('message', msg);
-  //   }
-  //   this.chat_input = '';
-  // }
-
-
-
-  //neww
-  //-----------------------------------------------------
-
   ionViewDidLoad() {
     this.chatService.getReviews().then((data) => {
       console.log(data);

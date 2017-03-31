@@ -1,9 +1,9 @@
 import {Component, trigger, state, style, transition, animate, keyframes} from '@angular/core';
 import {NavController, AlertController, LoadingController, Loading, ActionSheetController} from 'ionic-angular';
-import {HomePage} from "../home/home";
 import {DoctorSignUpPage} from "../doctor/signUp/doctor-sign-up/doctor-sign-up";
 import {PatientSignUpPage} from "../patient/patient-sign-up/patient-sign-up";
 import {DoctorService} from "../../providers/doctor-service";
+import {DoctorHomePage} from "../doctor/doctorHome/doctorHome";
 
 @Component({
   selector: 'page-login',
@@ -48,7 +48,8 @@ export class LoginPage {
   loading: Loading;
   registerCredentials = {email: '', password: ''};
 
-  constructor(public auth: DoctorService, private nav: NavController, public actionSheetCtrl: ActionSheetController, private alertCtrl: AlertController, private loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public auth: DoctorService, private nav: NavController, public actionSheetCtrl: ActionSheetController, private alertCtrl: AlertController, private loadingCtrl: LoadingController) {
+
   }
 
   showChose() {
@@ -91,6 +92,10 @@ export class LoginPage {
     alert.present(prompt);
   }
 
+  public login() {
+    this.nav.push(DoctorHomePage);
+  }
+
 
   // public login() {
   //   this.showLoading()
@@ -108,9 +113,6 @@ export class LoginPage {
   //       this.showError(error);
   //     });
   // }
-
-
-  loginSplash() {
-    this.nav.push(HomePage);
+  ionViewDidLoad() {
   }
 }

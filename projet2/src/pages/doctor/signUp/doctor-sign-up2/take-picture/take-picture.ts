@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {NavController, NavParams, ViewController, AlertController, ToastController, Loading,
   ActionSheetController, Platform, LoadingController, ModalController} from 'ionic-angular';
-import {Camera, File, FilePath, Transfer} from 'ionic-native';
+import {Camera, File, FilePath} from 'ionic-native';
 import {AppSettings} from "../../../../../providers/app-settings";
 
 
@@ -139,15 +139,6 @@ export class TakePicturePage {
 
   cancel(): void {
     this.view.dismiss();
-  }
-
-
-  private showToast(message: string) {
-    let toast = this.toastCtrl.create({
-      message: message,
-      duration: 3000
-    });
-    toast.present();
   }
 
 }
