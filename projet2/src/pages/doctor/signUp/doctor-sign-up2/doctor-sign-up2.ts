@@ -33,18 +33,25 @@ export class DoctorSignUp2Page {
 
   registerCredentials = {
     telNum: '',
+    age:'',
     specialty: ''
   };
+
+  today;
+
+
 
   constructor(public modalCtrl: ModalController,public appSettings: AppSettings,
               public platform: Platform, public loadingCtrl: LoadingController,
               public nav: NavController, public navParams: NavParams,
               private alertCtrl: AlertController, public toastCtrl: ToastController,
               public doctorService: DoctorService) {
+
+    this.today = new Date().toISOString();
+
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad DoctorSignUp2Page');
   }
 
   showCheckbox() {
@@ -89,7 +96,7 @@ export class DoctorSignUp2Page {
 
   public uploadImage(c,d) {
     // Destination URL
-    var url = this.apiUrl+"doctorsPics";
+    var url = this.apiUrl+"doctors/doctorsPics";
 
     // File for Upload
     var targetPath =c;
@@ -155,6 +162,7 @@ export class DoctorSignUp2Page {
               this.password,
               this.registerCredentials.telNum,
               this.registerCredentials.specialty,
+              this.registerCredentials.age,
               this.component,
               this.pic,
               '1'

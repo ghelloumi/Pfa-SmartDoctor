@@ -46,7 +46,7 @@ export class LoginPage {
   formState: any = "in";
 
   loading: Loading;
-  registerCredentials = {email: '', password: ''};
+  registerCredentials = {login: '', password: ''};
 
   constructor(public navCtrl: NavController, public auth: DoctorService, private nav: NavController, public actionSheetCtrl: ActionSheetController, private alertCtrl: AlertController, private loadingCtrl: LoadingController) {
 
@@ -96,14 +96,13 @@ export class LoginPage {
     this.nav.push(DoctorHomePage);
   }
 
-
   // public login() {
   //   this.showLoading()
   //   this.auth.login(this.registerCredentials).subscribe(allowed => {
   //       if (allowed) {
   //         setTimeout(() => {
   //           this.loading.dismiss();
-  //           this.nav.setRoot(DoctorSignUpPage)
+  //           this.nav.push(DoctorHomePage);
   //         });
   //       } else {
   //         this.showError("Access Denied");
@@ -113,6 +112,7 @@ export class LoginPage {
   //       this.showError(error);
   //     });
   // }
+
   ionViewDidLoad() {
   }
 }

@@ -32,4 +32,17 @@ page-doctor-sign-up2 {
   ion-item{
     border-radius: 5px;
   }
+
+  .item-datetime ion-label {
+    -webkit-flex: initial;
+    -ms-flex: initial;
+    flex: initial;
+    max-width: 200px;
+    pointer-events: none;
+  }
+
+  .datetime-text:empty:not(:focus):before{
+    content: "Age";
+    color: #999;
+  }
 }

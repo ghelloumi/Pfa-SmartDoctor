@@ -1,9 +1,8 @@
 import { Component} from '@angular/core';
 import {Platform} from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
-
 import {HomePage} from "../pages/home/home";
-import {DoctorHomeMenuPage} from "../pages/doctor/doctorHome/doctor-home-menu/doctor-home-menu";
+
 
 export interface MenuItem {
   title: string;
@@ -15,7 +14,7 @@ export interface MenuItem {
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = DoctorHomeMenuPage;
+  rootPage: any = HomePage;
 
   constructor(public platform: Platform) {
 

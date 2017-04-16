@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
- 
+
 var DoctorSchema = new Schema({
     fullName: {
         type: String,
@@ -14,11 +14,11 @@ var DoctorSchema = new Schema({
         type: String,
         required: true
     },
-cin: {
+    cin: {
         type: String,
         required: true
     },
-doctorNumber: {
+    doctorNumber: {
         type: String,
         required: true
     },
@@ -26,40 +26,44 @@ doctorNumber: {
         type: String,
         required: true
     },
-telNum: {
+    telNum: {
         type: String,
         required: true
     },
-specialty: {
+    specialty: {
         type: String,
         required: true
     },
-components: {
+    age: {
         type: String,
         required: true
     },
-picture: {
+    components: {
         type: String,
         required: true
     },
-typeC: {
-	type: String,
+    picture: {
+        type: String,
+        required: true
+    },
+    typeC: {
+        type: String,
         required: true
     },
 
     created_at: Date
 });
- 
+
 DoctorSchema.pre('save', function (next) {
     var doctor = this;
     // get the current date
     var currentDate = new Date();
- 
+
     // if created_at doesn't exist, add to that field
     if (!doctor.created_at) {
         doctor.created_at = currentDate;
     }
     next();
 });
- 
+
 module.exports = mongoose.model('Doctor', DoctorSchema);

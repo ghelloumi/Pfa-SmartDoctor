@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
-import {ChatService} from '../../../../providers/chat-service';
 import * as io from 'socket.io-client';
 import {AppSettings} from "../../../../providers/app-settings";
+import {DoctorService} from "../../../../providers/doctor-service";
 
 @Component({
   selector: 'page-chat',
@@ -11,39 +11,40 @@ import {AppSettings} from "../../../../providers/app-settings";
 export class ChatPage {
   apiUrl = this.appSettings.getApiUrl();
   socket: any;
-  reviews: any;
+  msgs: any;
   chat_input: string;
+
   chats = [];
+  items = [];
 
 
-  constructor(public navCtrl: NavController, public chatService: ChatService, public appSettings: AppSettings) {
+  constructor(public navCtrl: NavController, public doctorService: DoctorService, public appSettings: AppSettings) {
     this.socket = io(this.apiUrl);
-    this.socket.on('message', (msg) => {
+    this.socket.on('content', (msg) => {
       this.chats.push(msg);
     });
   }
 
   ionViewDidLoad() {
-    this.chatService.getReviews().then((data) => {
-      console.log(data);
-      this.reviews = data;
+    this.doctorService.getMsg().then((data) => {
+      this.msgs = data;
       for(var i=0;i<data.length;i++){
-        this.chats[i]=data[i].description;
-      }
+        this.chats[i]=data[i].content;
 
+      }
     });
   }
 
   send(msg) {
-    let review = {
-      title: "f",
-      description: msg,
-      rating: "42"
+    let message = {
+      source: "f",
+      content: msg,
+      date: new Date().toISOString()
     };
     if (msg != '') {
-      this.socket.emit('message', msg);
-      this.reviews.push(review);
-      this.chatService.createReview(review);
+      this.socket.emit('content', message.content);
+      this.msgs.push(message);
+      this.doctorService.createMsg(message);
     }
     this.chat_input = '';
   }

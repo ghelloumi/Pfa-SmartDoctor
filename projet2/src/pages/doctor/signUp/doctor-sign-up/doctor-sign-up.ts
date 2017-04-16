@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
+import {NavController, LoadingController, AlertController} from 'ionic-angular';
 import {DoctorSignUp2Page} from "../doctor-sign-up2/doctor-sign-up2";
+import {DoctorService} from "../../../../providers/doctor-service";
 
 @Component({
   selector: 'page-doctor-sign-up',
@@ -9,6 +10,7 @@ import {DoctorSignUp2Page} from "../doctor-sign-up2/doctor-sign-up2";
 
 
 export class DoctorSignUpPage {
+   verifDoctNum: string;
 
   registerCredentials = {
     fullName: '',
@@ -20,7 +22,8 @@ export class DoctorSignUpPage {
     passwordConfirm: ''
   };
 
-  constructor(public nav: NavController) {
+  constructor(public nav: NavController,public loadingCtrl: LoadingController,public alertCtrl: AlertController,
+              public doctorService: DoctorService) {
   }
 
   next() {
@@ -31,7 +34,7 @@ export class DoctorSignUpPage {
       cin: this.registerCredentials.cin,
       doctorNumber: this.registerCredentials.doctorNumber,
       password: this.registerCredentials.password
-    })
+    });
   }
 
 

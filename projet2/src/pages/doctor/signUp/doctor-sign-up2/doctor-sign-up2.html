@@ -13,8 +13,8 @@
           <ion-label>
             <ion-icon name="person"></ion-icon>
           </ion-label>
-          <ion-input type="text" placeholder="Telephone Number" name="telNum"
-                     [(ngModel)]="registerCredentials.telNum" required></ion-input>
+          <ion-input type="number" placeholder="Telephone Number" name="telNum"
+                     [(ngModel)]="registerCredentials.telNum" required clearInput></ion-input>
         </ion-item>
         <br>
       </ion-row>
@@ -24,10 +24,26 @@
             <ion-icon name="person"></ion-icon>
           </ion-label>
           <ion-input type="text" placeholder="Specialty" name="specialty"
-                     [(ngModel)]="registerCredentials.specialty" required></ion-input>
+                     [(ngModel)]="registerCredentials.specialty" required clearInput></ion-input>
         </ion-item>
         <br>
       </ion-row>
+
+      <ion-row>
+          <ion-item class="t">
+            <ion-label>
+              <ion-icon name="calendar"></ion-icon>
+            </ion-label>
+
+            <ion-datetime placeholder="" displayFormat="DD-MMMM-YYYY"  [(ngModel)]="registerCredentials.age" name="age" required></ion-datetime>
+
+
+
+          </ion-item>
+        <br>
+      </ion-row>
+
+
     </ion-col>
 
 
@@ -38,9 +54,12 @@
     </ion-row>
     <br>
 
-    <ion-col>
-      <button ion-button class="next-button" full type="button" (click)="addPicture()">Add PhotoCust</button>
-    </ion-col>
+    <ion-row>
+      <ion-col>
+        <button ion-button class="next-button" full type="button" (click)="addPicture()">Add picture</button>
+      </ion-col>
+    </ion-row>
+
 
     <ion-row>
       <ion-col class="signup-col">

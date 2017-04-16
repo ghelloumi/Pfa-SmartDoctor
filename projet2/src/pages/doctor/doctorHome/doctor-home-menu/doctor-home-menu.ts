@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {ChatPage} from "../chat/chat";
-import {PatientHomePage} from "../patient-home/patient-home";
 import {SearchPage} from "../search/search";
 import {ProfilePage} from "../profile/profile";
 import {CalendarPage} from "../calendar/calendar";
