@@ -3,6 +3,8 @@ import {Platform} from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 import {HomePage} from "../pages/home/home";
 
+import {ChatPage} from '../pages/doctor/doctorHome/chat/chat.ts';
+
 
 export interface MenuItem {
   title: string;

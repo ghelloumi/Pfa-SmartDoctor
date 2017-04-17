@@ -15,18 +15,40 @@
 
 </ion-header>
 
-<ion-content style="background-color:#0c0663">
 
-  <ion-list>
-    <ion-item *ngFor="let message of chats">{{message}}</ion-item>
+<ion-content>
+
+  <ion-list class="list-unstyled media-block" style="background-color: #ddd6db;">
+    <ion-item *ngFor="let message of chats" class="mar-btm">
+
+
+      <div class="media-left">
+        <img src="../../../../assets/img/profile.jpg" class="img-circle img-sm" alt="Profile Picture">
+      </div>
+      <div class="media-body pad-hor">
+        <div class="speech">
+          <a href="#" class="media-heading">{{message.source}}</a>
+          <p>{{message.content}}</p>
+          <p class="speech-time">
+            <ion-icon name="clock"></ion-icon>
+            {{message.date | date: 'H:mm'}}
+          </p>
+        </div>
+      </div>
+
+
+    </ion-item>
   </ion-list>
 
+
+  <!--Widget footer-->
   <ion-item>
-    <ion-input type="text" [(ngModel)]="chat_input" placeholder="Enter message"></ion-input>
+    <ion-input type="text" [(ngModel)]="chat_input" placeholder="Enter message" class="form-control"></ion-input>
   </ion-item>
+  <button ion-button block (click)="send(chat_input)" style="background-color: #4a97dd;">Send</button>
 
-  <button ion-button block (click)="send(chat_input)">Send</button>
+
+
+  <br>
 </ion-content>
-
-
 

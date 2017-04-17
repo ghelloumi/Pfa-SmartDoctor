@@ -28,11 +28,6 @@ app.use(express.static('../client'));
 app.use(bodyParser.json());
 
 
-
-
-
-
-
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
     app.use(errorhandler())
@@ -47,10 +42,6 @@ app.use(require('./doctor-routes')); //doctor-routes
 
 var server = http.createServer(app),
     socket = socket.listen(server);
-
-
-
-
 
 
 
@@ -69,8 +60,8 @@ var Msg = mongoose.model('Msg', {
 // Get reviews
 socket.on('connection', function (connection) {
     console.log('User Connected');
-    connection.on('content', function (msg) {
-        socket.emit('content', msg);
+    connection.on('item', function (item) {
+        socket.emit('item', item);
     });
 });
 
@@ -182,11 +173,9 @@ var storage = multer.diskStorage({ //multers disk storage settings
         cb(null, file.fieldname + '-' + file.originalname);
     }
 });
-
 var upload = multer({ //multer settings
     storage: storage
 }).single('file');
-
 app.post('/doctors/doctorsPics', function (req, res) {
     upload(req, res, function (err) {
         console.log(req.file);
@@ -198,7 +187,6 @@ app.post('/doctors/doctorsPics', function (req, res) {
         res.json({error_code: 0, err_desc: null});
     });
 });
-
 //-------------------------
 
 

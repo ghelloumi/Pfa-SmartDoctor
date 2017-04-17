@@ -9,9 +9,9 @@ import {DoctorService} from "../../../../providers/doctor-service";
   templateUrl: 'chat.html'
 })
 export class ChatPage {
+
   apiUrl = this.appSettings.getApiUrl();
   socket: any;
-  msgs: any;
   chat_input: string;
 
   chats = [];
@@ -20,31 +20,41 @@ export class ChatPage {
 
   constructor(public navCtrl: NavController, public doctorService: DoctorService, public appSettings: AppSettings) {
     this.socket = io(this.apiUrl);
-    this.socket.on('content', (msg) => {
-      this.chats.push(msg);
+    this.socket.on('item', (item) => {
+      this.items.push(item.source);
+      this.items.push(item.content);
+      this.items.push(item.date);
+
+      this.chats.push(item);
     });
   }
 
   ionViewDidLoad() {
     this.doctorService.getMsg().then((data) => {
-      this.msgs = data;
-      for(var i=0;i<data.length;i++){
-        this.chats[i]=data[i].content;
-
+      for (var i = 0; i < data.length; i++) {
+        let item = {
+          source: null,
+          content: null,
+          date: null
+        };
+        this.chats[i] = item;
+        this.chats[i].source = data[i].source;
+        this.chats[i].content = data[i].content;
+        this.chats[i].date = data[i].date;
       }
     });
   }
 
   send(msg) {
-    let message = {
-      source: "f",
+    let item = {
+      source: "X",
       content: msg,
       date: new Date().toISOString()
     };
+
     if (msg != '') {
-      this.socket.emit('content', message.content);
-      this.msgs.push(message);
-      this.doctorService.createMsg(message);
+      this.socket.emit('item', item);
+      this.doctorService.createMsg(item);
     }
     this.chat_input = '';
   }

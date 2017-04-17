@@ -44,10 +44,8 @@ export class DoctorService {
   //chat
 
   getMsg(){
-
     if (this.data) {
       return Promise.resolve(this.data);
-
     }
     return new Promise(resolve => {
 
