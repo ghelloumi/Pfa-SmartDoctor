@@ -3,12 +3,7 @@ import {Injectable} from '@angular/core';
 import {Http, Headers} from '@angular/http';
 import 'rxjs/add/operator/map';
 
-/*
- Generated class for the DoctorService provider.
 
- See https://angular.io/docs/ts/latest/guide/dependency-injection.html
- for more info on providers and Angular 2 DI.
- */
 @Injectable()
 export class DoctorService {
 
@@ -19,7 +14,9 @@ export class DoctorService {
     this.data = null;
   }
 
-
+//-----------------
+//Ajouter un docteur
+//-----------------
   public addDoctor(fullName, userName, email, cin, doctorNumber, password, telNum, specialty,age,components,pic,typeC) {
     return this.http.post(this.apiUrl + 'doctors', {
       'fullName': fullName,
@@ -40,9 +37,19 @@ export class DoctorService {
   }
 
 
+//-----------------
+// Connecter un docteur
+//-----------------
+  public getDoctors() {
+    return this.http.get(this.apiUrl + 'doctors')
+      .map(response => response.json().result);
+  }
 
-  //chat
 
+
+//-----------------
+// Chat
+//-----------------
   getMsg(){
     if (this.data) {
       return Promise.resolve(this.data);
@@ -57,7 +64,6 @@ export class DoctorService {
         });
     });
   }
-
   createMsg(review){
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');

@@ -1,14 +1,22 @@
-import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
+import {Component, ViewChild,Directive, ElementRef, OnInit, OnDestroy, Output, EventEmitter} from '@angular/core';
+import {NavController, Content} from 'ionic-angular';
 import * as io from 'socket.io-client';
 import {AppSettings} from "../../../../providers/app-settings";
 import {DoctorService} from "../../../../providers/doctor-service";
+import {Gesture} from 'ionic-angular/gestures/gesture';
+import {LoginPage} from "../../../login/login";
 
 @Component({
   selector: 'page-chat',
   templateUrl: 'chat.html'
 })
+
+
 export class ChatPage {
+  @ViewChild(Content) content: Content;
+
+
+
 
   apiUrl = this.appSettings.getApiUrl();
   socket: any;
@@ -17,8 +25,11 @@ export class ChatPage {
   chats = [];
   items = [];
 
+  //to refrech instantally chat
+  public itemss: any[] = [];
 
-  constructor(public navCtrl: NavController, public doctorService: DoctorService, public appSettings: AppSettings) {
+
+  constructor(public navCtrl: NavController, public doctorService: DoctorService, public appSettings: AppSettings,el:ElementRef) {
     this.socket = io(this.apiUrl);
     this.socket.on('item', (item) => {
       this.items.push(item.source);
@@ -27,6 +38,21 @@ export class ChatPage {
 
       this.chats.push(item);
     });
+
+    //to refrech instantally chat
+    setTimeout(() => {
+      for (let i = 0; i < 100; i++) {
+        this.itemss[i] = i
+      }
+    }, 300)
+  }
+
+
+  //long press
+
+  //to refrech instantally chat
+  callFunction(){
+    this.content.scrollToBottom(0)
   }
 
   ionViewDidLoad() {
@@ -45,11 +71,13 @@ export class ChatPage {
     });
   }
 
+
   send(msg) {
     let item = {
-      source: "X",
+      source: LoginPage.loggedin.fullName,
       content: msg,
       date: new Date().toISOString()
+
     };
 
     if (msg != '') {

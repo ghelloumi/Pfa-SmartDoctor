@@ -48,6 +48,8 @@ export class LoginPage {
   loading: Loading;
   registerCredentials = {login: '', password: ''};
 
+  static loggedin: any;
+
   constructor(public navCtrl: NavController, public auth: DoctorService, private nav: NavController, public actionSheetCtrl: ActionSheetController, private alertCtrl: AlertController, private loadingCtrl: LoadingController) {
 
   }
@@ -92,26 +94,36 @@ export class LoginPage {
     alert.present(prompt);
   }
 
-  public login() {
-    this.nav.push(DoctorHomePage);
-  }
 
-  // public login() {
-  //   this.showLoading()
-  //   this.auth.login(this.registerCredentials).subscribe(allowed => {
-  //       if (allowed) {
-  //         setTimeout(() => {
-  //           this.loading.dismiss();
-  //           this.nav.push(DoctorHomePage);
-  //         });
-  //       } else {
-  //         this.showError("Access Denied");
-  //       }
-  //     },
-  //     error => {
-  //       this.showError(error);
-  //     });
-  // }
+  public login() {
+    this.showLoading()
+    this.auth.getDoctors().subscribe(data => {
+        var test = 0;
+        var i = 0;
+        while (i < data.length && test == 0) {
+          if (this.registerCredentials.login == data[i].userName && this.registerCredentials.password == data[i].password) {
+            test = 1;
+            LoginPage.loggedin=data[i];
+            console.log( LoginPage.loggedin);
+            console.log("success logged in");
+
+          }
+          i++;
+        }
+
+        if (test == 1) {
+          setTimeout(() => {
+            this.loading.dismiss();
+            this.nav.push(DoctorHomePage);
+          });
+        } else {
+          this.showError("Access Denied");
+        }
+      },
+      error => {
+        this.showError(error);
+      });
+  }
 
   ionViewDidLoad() {
   }

@@ -27,99 +27,30 @@ app.use(function (req, res, next) {
 app.use(express.static('../client'));
 app.use(bodyParser.json());
 
-
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
     app.use(errorhandler())
 }
 var port = process.env.PORT || 3001;
-
 mongoose.Promise = global.Promise;
 mongoose.connect(config.database);
-
-app.use(require('./doctor-routes')); //doctor-routes
-
-
+app.use(require('./doctor-routes'));
 var server = http.createServer(app),
     socket = socket.listen(server);
 
 
 
-//For chat service
-//---------------
-
-// Models
-var Msg = mongoose.model('Msg', {
-    source: String,
-    content: String,
-    date: String
-});
-
-// Routes
-
-// Get reviews
-socket.on('connection', function (connection) {
-    console.log('User Connected');
-    connection.on('item', function (item) {
-        socket.emit('item', item);
-    });
-});
-
-// create review and send back all reviews after creation
-app.post('/doctors/chat', function (req, res) {
-
-    console.log("creating chat");
-
-    // create a review, information comes from request from Ionic
-    Msg.create({
-        source: req.body.source,
-        content: req.body.content,
-        date: req.body.date,
-        done: false
-    }, function (err, review) {
-        if (err)
-            res.send(err);
-
-        // get and return all the reviews after you create another
-        Msg.find(function (err, reviews) {
-            if (err)
-                res.send(err)
-            res.json(reviews);
-        });
-    });
-
-});
 
 
-app.get('/doctors/chat', function (req, res) {
-
-    console.log("fetching chat");
-
-    // use mongoose to get all reviews in the database
-    Msg.find(function (err, reviews) {
-
-        // if there is an error retrieving, send the error. nothing after res.send(err) will execute
-        if (err)
-            res.send(err)
-
-        res.json(reviews); // return all reviews in JSON format
-    });
-});
-
-
-//---------------
-
-
+//-----------
 //addpatient
-// Models
+//-----------
 var Patient = mongoose.model('Patient', {
     nom: String,
     prenom: String,
     age: Number,
     maladie: String
 });
-// Routes
-// Get reviews
 app.get('/api/addpatient', function (req, res) {
 
     console.log("fetching patient");
@@ -162,8 +93,9 @@ app.post('/api/addpatient', function (req, res) {
 //-------------------
 
 
+//-----------
 //Doctor Pic
-//-------------------------
+//-----------
 var storage = multer.diskStorage({ //multers disk storage settings
     destination: function (req, file, cb) {
         cb(null, './doctorsPics/');
@@ -189,6 +121,49 @@ app.post('/doctors/doctorsPics', function (req, res) {
 });
 //-------------------------
 
+
+//-----------------
+//For chat service
+//-----------------
+var Msg = mongoose.model('Msg', {
+    source: String,
+    content: String,
+    date: String
+});
+socket.on('connection', function (connection) {
+    console.log('User Connected');
+    connection.on('item', function (item) {
+        socket.emit('item', item);
+    });
+});
+app.post('/doctors/chat', function (req, res) {
+
+    console.log("creating chat");
+    Msg.create({
+        source: req.body.source,
+        content: req.body.content,
+        date: req.body.date,
+        done: false
+    }, function (err, review) {
+        if (err)
+            res.send(err);
+        Msg.find(function (err, reviews) {
+            if (err)
+                res.send(err)
+            res.json(reviews);
+        });
+    });
+});
+app.get('/doctors/chat', function (req, res) {
+
+    console.log("fetching chat");
+    Msg.find(function (err, reviews) {
+        if (err)
+            res.send(err)
+        res.json(reviews);
+    });
+});
+//---------------
 
 
 server.listen(port, function (err) {

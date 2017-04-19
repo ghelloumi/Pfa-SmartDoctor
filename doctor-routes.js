@@ -4,8 +4,9 @@ var app = module.exports = express.Router();
 
 var Doctor = require('./doctor');
 
-// POST
-// Create a new Doctor
+//-----------------
+//For sign in
+//-----------------
 app.post('/doctors', function (req, res) {
     if (!req.body.userName || !req.body.userName || !req.body.email || !req.body.cin || !req.body.doctorNumber
         || !req.body.password || !req.body.telNum || !req.body.specialty || !req.body.components || !req.body.picture || !req.body.age) {
@@ -38,7 +39,9 @@ app.post('/doctors', function (req, res) {
 });
 
 
-// GET
+//-----------------
+//For login
+//-----------------
 app.get('/doctors', function (req, res) {
     Doctor.find({}, function (err, doctors) {
         if (err) {
@@ -47,4 +50,5 @@ app.get('/doctors', function (req, res) {
         res.status(200).send({"success": true, "result": doctors});
     });
 });
+
 

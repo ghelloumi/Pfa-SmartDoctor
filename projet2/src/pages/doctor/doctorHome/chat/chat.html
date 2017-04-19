@@ -19,8 +19,7 @@
 <ion-content>
 
   <ion-list class="list-unstyled media-block" style="background-color: #ddd6db;">
-    <ion-item *ngFor="let message of chats" class="mar-btm">
-
+    <ion-item *ngFor="let message of chats ; let last = last" class="mar-btm">
 
       <div class="media-left">
         <img src="../../../../assets/img/profile.jpg" class="img-circle img-sm" alt="Profile Picture">
@@ -35,7 +34,7 @@
           </p>
         </div>
       </div>
-
+      {{last ? callFunction() : ''}}
 
     </ion-item>
   </ion-list>
