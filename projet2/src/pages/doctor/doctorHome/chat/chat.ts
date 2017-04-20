@@ -15,9 +15,6 @@ import {LoginPage} from "../../../login/login";
 export class ChatPage {
   @ViewChild(Content) content: Content;
 
-
-
-
   apiUrl = this.appSettings.getApiUrl();
   socket: any;
   chat_input: string;
@@ -35,6 +32,8 @@ export class ChatPage {
       this.items.push(item.source);
       this.items.push(item.content);
       this.items.push(item.date);
+      //this.items.push(item.LoginPage.loggedin.fullName);
+
 
       this.chats.push(item);
     });
@@ -48,6 +47,9 @@ export class ChatPage {
   }
 
 
+
+
+
   //long press
 
   //to refrech instantally chat
@@ -56,7 +58,7 @@ export class ChatPage {
   }
 
   ionViewDidLoad() {
-    this.doctorService.getMsg().then((data) => {
+    this.doctorService.getMsg(LoginPage.loggedin._id).then((data) => {
       for (var i = 0; i < data.length; i++) {
         let item = {
           source: null,
@@ -76,8 +78,8 @@ export class ChatPage {
     let item = {
       source: LoginPage.loggedin.fullName,
       content: msg,
-      date: new Date().toISOString()
-
+      date: new Date().toISOString(),
+      doctorId: LoginPage.loggedin._id
     };
 
     if (msg != '') {

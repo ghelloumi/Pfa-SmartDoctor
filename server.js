@@ -128,7 +128,8 @@ app.post('/doctors/doctorsPics', function (req, res) {
 var Msg = mongoose.model('Msg', {
     source: String,
     content: String,
-    date: String
+    date: String,
+    doctorId: String
 });
 socket.on('connection', function (connection) {
     console.log('User Connected');
@@ -143,6 +144,7 @@ app.post('/doctors/chat', function (req, res) {
         source: req.body.source,
         content: req.body.content,
         date: req.body.date,
+        doctorId: req.body.doctorId,
         done: false
     }, function (err, review) {
         if (err)
