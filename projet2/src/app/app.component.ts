@@ -1,9 +1,10 @@
 import { Component} from '@angular/core';
 import {Platform} from 'ionic-angular';
-import { StatusBar, Splashscreen } from 'ionic-native';
+import { StatusBar, Splashscreen,SQLite } from 'ionic-native';
 import {HomePage} from "../pages/home/home";
 
-import {ChatPage} from '../pages/doctor/doctorHome/chat/chat.ts';
+import {SessionsService} from "../providers/sessions-service";
+import {ShowSessionsPage} from "../pages/show-sessions/show-sessions";
 
 
 export interface MenuItem {
@@ -16,10 +17,9 @@ export interface MenuItem {
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = HomePage;
+  rootPage: any = null;
 
-  constructor(public platform: Platform) {
-
+  constructor(public platform: Platform,public sessionsService: SessionsService) {
     this.initializeApp();
   }
 
@@ -30,8 +30,13 @@ export class MyApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      StatusBar.styleLightContent();
+      StatusBar.styleDefault();
       Splashscreen.hide();
+      this.sessionsService.openDatabase()
+        .then(() => this.sessionsService.createTable())
+        .then(()=>{
+          this.rootPage = ShowSessionsPage;
+        })
     });
   }
 }

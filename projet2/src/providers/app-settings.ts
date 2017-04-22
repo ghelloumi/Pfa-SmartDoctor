@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 
 const CONFIG = {
-  apiUrl: 'http://192.168.1.13:3001/',
-
-  //lezimna methode tlwaj l inet adr mtal wifi automatiquement
+  apiUrl: 'http://192.168.1.11:3001/'
 };
 
 @Injectable()

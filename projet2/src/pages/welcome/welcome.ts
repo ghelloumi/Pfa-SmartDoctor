@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {NavController, NavParams} from 'ionic-angular';
+import {NavController,} from 'ionic-angular';
+import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 
 /*
   Generated class for the Welcome page.
@@ -13,8 +14,13 @@ import {NavController, NavParams} from 'ionic-angular';
 })
 export class WelcomePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController) {
+  }
+
 
   ionViewDidLoad() {
   }
+
+
+
 }

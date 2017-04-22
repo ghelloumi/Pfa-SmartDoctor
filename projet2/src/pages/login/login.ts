@@ -4,6 +4,8 @@ import {DoctorSignUpPage} from "../doctor/signUp/doctor-sign-up/doctor-sign-up";
 import {PatientSignUpPage} from "../patient/patient-sign-up/patient-sign-up";
 import {DoctorService} from "../../providers/doctor-service";
 import {DoctorHomePage} from "../doctor/doctorHome/doctorHome";
+import {SessionsService} from "../../providers/sessions-service";
+import {ShowSessionsPage} from "../show-sessions/show-sessions";
 
 @Component({
   selector: 'page-login',
@@ -49,8 +51,10 @@ export class LoginPage {
   registerCredentials = {login: '', password: ''};
 
   static loggedin: any;
+  tasks: any[] = [];
 
-  constructor(public navCtrl: NavController, public auth: DoctorService, private nav: NavController, public actionSheetCtrl: ActionSheetController, private alertCtrl: AlertController, private loadingCtrl: LoadingController) {
+
+  constructor(public sessionsService: SessionsService,public navCtrl: NavController, public auth: DoctorService, private nav: NavController, public actionSheetCtrl: ActionSheetController, private alertCtrl: AlertController, private loadingCtrl: LoadingController) {
 
   }
 
@@ -94,6 +98,10 @@ export class LoginPage {
     alert.present(prompt);
   }
 
+  ionViewDidLoad() {
+  }
+
+
 
   public login() {
     this.showLoading()
@@ -107,6 +115,11 @@ export class LoginPage {
             console.log( LoginPage.loggedin);
             console.log("success logged in");
 
+            //adding to sqlite
+            //--------------------------
+
+            //--------------------------
+
           }
           i++;
         }
@@ -114,7 +127,8 @@ export class LoginPage {
         if (test == 1) {
           setTimeout(() => {
             this.loading.dismiss();
-            this.nav.push(DoctorHomePage);
+            //this.nav.push(DoctorHomePage);
+            this.nav.push(ShowSessionsPage);
           });
         } else {
           this.showError("Access Denied");
@@ -125,6 +139,5 @@ export class LoginPage {
       });
   }
 
-  ionViewDidLoad() {
-  }
+
 }

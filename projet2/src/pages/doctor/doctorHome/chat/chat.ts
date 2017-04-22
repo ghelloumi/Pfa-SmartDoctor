@@ -45,11 +45,6 @@ export class ChatPage {
       }
     }, 300)
   }
-
-
-
-
-
   //long press
 
   //to refrech instantally chat

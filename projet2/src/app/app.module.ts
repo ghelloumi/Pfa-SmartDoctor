@@ -26,6 +26,8 @@ import {DoctorService} from "../providers/doctor-service";
 import {AppSettings} from "../providers/app-settings";
 import {ProfilePage} from "../pages/doctor/doctorHome/profile/profile";
 import {CalendarPage} from "../pages/doctor/doctorHome/calendar/calendar";
+import {SessionsService} from "../providers/sessions-service";
+import {ShowSessionsPage} from "../pages/show-sessions/show-sessions";
 
 
 @NgModule({
@@ -47,7 +49,8 @@ import {CalendarPage} from "../pages/doctor/doctorHome/calendar/calendar";
     TakePicturePage,
     DoctorHomeMenuPage,
     ProfilePage,
-    CalendarPage
+    CalendarPage,
+    ShowSessionsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -70,9 +73,10 @@ import {CalendarPage} from "../pages/doctor/doctorHome/calendar/calendar";
     TakePicturePage,
     DoctorHomeMenuPage,
     ProfilePage,
-    CalendarPage
+    CalendarPage,
+    ShowSessionsPage
   ],
-  providers: [DoctorService, AppSettings,PatientService,{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [DoctorService, AppSettings,PatientService,SessionsService,{provide: ErrorHandler, useClass: IonicErrorHandler}]
 
 })
 export class AppModule {
