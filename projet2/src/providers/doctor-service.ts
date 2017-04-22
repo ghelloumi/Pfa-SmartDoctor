@@ -3,6 +3,7 @@ import {Injectable} from '@angular/core';
 import {Http, Headers} from '@angular/http';
 import 'rxjs/add/operator/map';
 import {LoginPage} from "../pages/login/login";
+import {SessionService} from "./sessions-service";
 
 
 @Injectable()
@@ -11,7 +12,7 @@ export class DoctorService {
   apiUrl = this.appSettings.getApiUrl();
   data: any;
 
-  constructor(public http: Http, public appSettings: AppSettings) {
+  constructor(public sessionsService: SessionService,public http: Http, public appSettings: AppSettings) {
     this.data = null;
   }
 

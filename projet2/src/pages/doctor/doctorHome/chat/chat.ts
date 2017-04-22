@@ -3,7 +3,6 @@ import {NavController, Content} from 'ionic-angular';
 import * as io from 'socket.io-client';
 import {AppSettings} from "../../../../providers/app-settings";
 import {DoctorService} from "../../../../providers/doctor-service";
-import {Gesture} from 'ionic-angular/gestures/gesture';
 import {LoginPage} from "../../../login/login";
 
 @Component({

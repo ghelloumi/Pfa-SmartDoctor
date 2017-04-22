@@ -26,7 +26,7 @@ import {DoctorService} from "../providers/doctor-service";
 import {AppSettings} from "../providers/app-settings";
 import {ProfilePage} from "../pages/doctor/doctorHome/profile/profile";
 import {CalendarPage} from "../pages/doctor/doctorHome/calendar/calendar";
-import {SessionsService} from "../providers/sessions-service";
+import {SessionService} from "../providers/sessions-service";
 import {ShowSessionsPage} from "../pages/show-sessions/show-sessions";
 
 
@@ -76,7 +76,7 @@ import {ShowSessionsPage} from "../pages/show-sessions/show-sessions";
     CalendarPage,
     ShowSessionsPage
   ],
-  providers: [DoctorService, AppSettings,PatientService,SessionsService,{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [DoctorService, AppSettings,PatientService,SessionService,{provide: ErrorHandler, useClass: IonicErrorHandler}]
 
 })
 export class AppModule {
