@@ -16,8 +16,6 @@ export class WelcomePage {
 
   constructor(public navCtrl: NavController) {
   }
-
-
   ionViewDidLoad() {
   }
 

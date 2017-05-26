@@ -11,7 +11,7 @@ import {ShowSessionsPage} from "../pages/show-sessions/show-sessions";
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any ;
+  rootPage: any =HomePage;
 
   constructor(public platform: Platform,public sessionsService: SessionService) {
     this.initializeApp();
@@ -26,11 +26,11 @@ export class MyApp {
     this.platform.ready().then(() => {
       StatusBar.styleDefault();
       Splashscreen.hide();
-      this.sessionsService.openDatabase()
-        .then(() => this.sessionsService.createTable())
-        .then(()=>{
-          this.rootPage = ShowSessionsPage;
-        })
+      // this.sessionsService.openDatabase()
+      //   .then(() => this.sessionsService.createTable())
+      //   .then(()=>{
+      //     this.rootPage = HomePage;
+      //   })
     });
   }
 }
