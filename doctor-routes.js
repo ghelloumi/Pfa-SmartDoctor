@@ -9,7 +9,7 @@ var Doctor = require('./doctor');
 //-----------------
 app.post('/doctors', function (req, res) {
     if (!req.body.userName || !req.body.userName || !req.body.email || !req.body.cin || !req.body.doctorNumber
-        || !req.body.password || !req.body.telNum || !req.body.specialty || !req.body.components || !req.body.picture || !req.body.age) {
+        || !req.body.password || !req.body.telNum || !req.body.components || !req.body.picture || !req.body.age || !req.body.adress || !req.body.adressMap) {
         return res.status(400).send({"success": false, "msg": "You need to fill all blanks!"});
     }
 
@@ -25,8 +25,9 @@ app.post('/doctors', function (req, res) {
         age: req.body.age,
         components: req.body.components,
         picture: req.body.picture,
+        adress: req.body.adress,
+        adressMap: req.body.adressMap,
         typeC: req.body.typeC
-
     });
 
     newDoctor.save(function (err) {

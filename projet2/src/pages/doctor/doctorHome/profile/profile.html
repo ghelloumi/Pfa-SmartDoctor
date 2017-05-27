@@ -13,36 +13,52 @@
 </ion-header>
 
 
-<ion-content>
-  <div class="banner"></div>
-  <img class="img-circle" src="../../../../assets/img/profilepp.jpg"/>
+<ion-content class="broker">
 
-  <div class="name">Mr Doctor</div>
-  <div class="line-separator"></div>
+  <ion-card>
+
+    <ion-card-content>
+      <img src="{{picture}}"/>
+      <h2>{{firstName}} {{lastName}}</h2>
+      <h3>{{title}}</h3>
+    </ion-card-content>
+
+    <ion-list>
+      <a href="tel:{{phone}}" ion-item>
+        <ion-icon name="call" item-left></ion-icon>
+        <p>Call Office</p>
+        <h2>{{mobilePhone}}</h2>
+      </a>
+      <a href="tel:{{phone}}" ion-item>
+        <ion-icon name="call" item-left></ion-icon>
+        <p>Call Mobile</p>
+        <h2>{{mobilePhone}}</h2>
+      </a>
+      <a href="tel:{{phone}}" ion-item>
+        <ion-icon name="text" item-left></ion-icon>
+        <p>Text</p>
+        <h2>{{mobilePhone}}</h2>
+      </a>
+      <a href="mailto:{{mail}}" ion-item>
+        <ion-icon name="mail" item-left></ion-icon>
+        <p>Email</p>
+        <h2>{{mail}}</h2>
+      </a>
+    </ion-list>
+
+  </ion-card>
+  <ion-item>
+    <!--<button ion-button icon-left (click)="favorite($event, property)" clear item-left>-->
+      <!--<ion-icon name="star"></ion-icon>-->
+      <!--Favorite-->
+    <!--</button>-->
+    <!--<button ion-button icon-left (click)="share($event, property)" clear item-right>-->
+      <!--<ion-icon name="share"></ion-icon>-->
+      <!--Share-->
+    <!--</button>-->
+
+  </ion-item>
 
 
-  <div class="containerprofile">
-  <div class="buttons">
-  <button ion-button>My infos</button>
-  <button ion-button>Button</button>
-  <button ion-button>Button</button>
-  </div>
 
-  <div class="slides">
-    <ion-slides [options]="{pager: true}">
-      <ion-slide style="background-image: url('../../../../assets/img/profileppbanner.jpg')">
-        <p>111111111111111111111111</p>
-      </ion-slide>
-
-      <ion-slide style="background-image: url('../../../../assets/img/profileppbanner.jpg')">
-        <p>222222222222222222222222</p>
-      </ion-slide>
-
-      <ion-slide style="background-image: url('../../../../assets/img/profileppbanner.jpg')">
-        <p>333333333333333333333333</p>
-      </ion-slide>
-
-    </ion-slides>
-  </div>
-  </div>
 </ion-content>

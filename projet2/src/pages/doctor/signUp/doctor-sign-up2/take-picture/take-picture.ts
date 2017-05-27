@@ -129,16 +129,28 @@ export class TakePicturePage {
 
 
   save(): void {
+    if(this.pathForImage(this.lastImage)==null || this.lastImage==null){
+      let pic = {
+        pic_path:"",
+        pic_last:""
+      };
+      this.view.dismiss(pic);
+    }else{
     let pic = {
       pic_path: this.pathForImage(this.lastImage),
       pic_last: this.lastImage
     };
-    this.view.dismiss(pic);
+      this.view.dismiss(pic);
+    }
 
   }
 
   cancel(): void {
-    this.view.dismiss();
+    let pic = {
+      pic_path:"",
+      pic_last:""
+    };
+    this.view.dismiss(pic);
   }
 
 }

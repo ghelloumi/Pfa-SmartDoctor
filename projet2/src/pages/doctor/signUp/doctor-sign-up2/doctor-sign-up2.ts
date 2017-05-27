@@ -8,6 +8,7 @@ import {Transfer} from 'ionic-native';
 import {DoctorService} from "../../../../providers/doctor-service";
 import {AppSettings} from "../../../../providers/app-settings";
 import {TakePicturePage} from "./take-picture/take-picture";
+import {ShowMapPage} from "./show-map/show-map";
 
 declare var cordova: any;
 var a,b: string;
@@ -21,7 +22,8 @@ export class DoctorSignUp2Page {
 
   loading: Loading;
   component: string;
-  pic:string;
+  pic:string ="";
+  adressMap:string;
 
   fullName = this.navParams.get('fullName');
   userName = this.navParams.get('userName');
@@ -34,12 +36,11 @@ export class DoctorSignUp2Page {
   registerCredentials = {
     telNum: '',
     age:'',
-    specialty: ''
+    specialty: '',
+    adress:''
   };
 
   today;
-
-
 
   constructor(public modalCtrl: ModalController,public appSettings: AppSettings,
               public platform: Platform, public loadingCtrl: LoadingController,
@@ -131,16 +132,28 @@ export class DoctorSignUp2Page {
 
 
   addPicture(){
-
     let modal = this.modalCtrl.create(TakePicturePage);
     modal.onDidDismiss(pic => {
+      if(pic.pic_last=="" || pic.pic_last==""){
+        this.showToast("Please take a photo");
+      }else{
       a=pic.pic_path;
       b=pic.pic_last;
       this.pic="file-"+b;
+      }
     });
     modal.present();
 
   }
+
+  showMap(){
+    let modal = this.modalCtrl.create(ShowMapPage);
+    modal.onDidDismiss(map => {
+
+    });
+    modal.present();
+  }
+
 
   addDoctor() {
     let prompt = this.alertCtrl.create({
@@ -165,6 +178,8 @@ export class DoctorSignUp2Page {
               this.registerCredentials.age,
               this.component,
               this.pic,
+              this.registerCredentials.adress,
+              this.adressMap,
               '1'
             ).subscribe(data => {
               this.showToast(data.msg);

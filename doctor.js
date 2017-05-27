@@ -31,8 +31,7 @@ var DoctorSchema = new Schema({
         required: true
     },
     specialty: {
-        type: String,
-        required: true
+        type: String
     },
     age: {
         type: String,
@@ -47,6 +46,14 @@ var DoctorSchema = new Schema({
         required: true
     },
     typeC: {
+        type: String,
+        required: true
+    },
+    adress: {
+        type: String,
+        required: true
+    },
+    adressMap: {
         type: String,
         required: true
     },

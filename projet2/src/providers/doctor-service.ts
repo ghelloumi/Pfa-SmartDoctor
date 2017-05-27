@@ -19,7 +19,7 @@ export class DoctorService {
 //-----------------
 //Ajouter un docteur
 //-----------------
-  public addDoctor(fullName, userName, email, cin, doctorNumber, password, telNum, specialty, age, components, pic, typeC) {
+  public addDoctor(fullName, userName, email, cin, doctorNumber, password, telNum, specialty, age, components, pic, adress,adressMap,typeC) {
     return this.http.post(this.apiUrl + 'doctors', {
       'fullName': fullName,
       'userName': userName,
@@ -32,6 +32,8 @@ export class DoctorService {
       'age': age,
       'components': components,
       'picture': pic,
+      'adress':adress,
+      'adressMap':adressMap,
       'typeC': typeC
 
     })

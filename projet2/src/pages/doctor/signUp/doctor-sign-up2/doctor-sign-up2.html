@@ -18,32 +18,46 @@
         </ion-item>
         <br>
       </ion-row>
+
       <ion-row>
         <ion-item>
           <ion-label>
             <ion-icon name="person"></ion-icon>
           </ion-label>
           <ion-input type="text" placeholder="Specialty" name="specialty"
-                     [(ngModel)]="registerCredentials.specialty" required clearInput></ion-input>
+                     [(ngModel)]="registerCredentials.specialty" clearInput></ion-input>
         </ion-item>
         <br>
       </ion-row>
 
       <ion-row>
-          <ion-item class="t">
+        <ion-col>
+          <ion-item>
             <ion-label>
-              <ion-icon name="calendar"></ion-icon>
+              <ion-icon name="person"></ion-icon>
             </ion-label>
-
-            <ion-datetime placeholder="" displayFormat="DD-MMMM-YYYY"  [(ngModel)]="registerCredentials.age" name="age" required></ion-datetime>
-
-
-
+            <ion-input type="text" placeholder="Adress" name="adress"
+                       [(ngModel)]="registerCredentials.adress" required clearInput></ion-input>
           </ion-item>
-        <br>
+          <ion-item>
+          <button ion-button icon-left class="next-button"  round full (click)="showMap()">
+            <ion-icon name="map"></ion-icon>
+            Locate me
+          </button>
+            </ion-item>
+        </ion-col>
       </ion-row>
 
+      <ion-row>
+        <ion-item class="t">
+          <ion-label>
+            <ion-icon name="calendar"></ion-icon>
+          </ion-label>
 
+          <ion-datetime placeholder="" displayFormat="DD-MMMM-YYYY" [(ngModel)]="registerCredentials.age" name="age"
+                        required></ion-datetime>
+        </ion-item>
+      </ion-row>
     </ion-col>
 
 
@@ -52,7 +66,6 @@
         <button ion-button class="next-button" full type="button" (click)="showCheckbox()">Components</button>
       </ion-col>
     </ion-row>
-    <br>
 
     <ion-row>
       <ion-col>

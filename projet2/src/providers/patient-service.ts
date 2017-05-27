@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import {Http, Headers} from '@angular/http';
+import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-import {AppSettings} from './app-settings';
 
 /*
   Generated class for the PatientService provider.
@@ -12,40 +11,8 @@ import {AppSettings} from './app-settings';
 @Injectable()
 export class PatientService {
 
-  data: any;
-  apiUrl = this.appSettings.getApiUrl();
-  constructor(public http: Http,public appSettings: AppSettings) {
-    this.data = null;
+  constructor(public http: Http) {
+    console.log('Hello PatientService Provider');
   }
-
-  getReviews(){
-
-    if (this.data) {
-      return Promise.resolve(this.data);
-    }
-
-    return new Promise(resolve => {
-
-      this.http.get(this.apiUrl+'api/addpatient')
-        .map(res => res.json())
-        .subscribe(data => {
-          this.data = data;
-          resolve(this.data);
-        });
-    });
-  }
-
-  createReview(patient){
-
-    let headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-
-    this.http.post(this.apiUrl+'api/addpatient', JSON.stringify(patient), {headers: headers})
-      .subscribe(res => {
-        console.log(res.json());
-      });
-
-  }
-
 
 }
